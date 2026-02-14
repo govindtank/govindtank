@@ -8,11 +8,20 @@
 - name: Kotlin
   weight: 5
 
-- name: React Native
-  weight: 3
+- name: Dart
+  weight: 5
 
 - name: Node.js (Express.js)
   weight: 3
+
+- name: Express.js
+  weight: 2
+
+- name: TypeScript
+  weight: 3
+
+- name: Firebase
+  weight: 5
 
 - name: Flutter
   weight: 5
@@ -20,5 +29,14 @@
 - name: Jetpack Compose
   weight: 5
   
-- name: Ionic
+- name: Java
+  weight: 5
+
+- name: Android
+  weight: 5
+
+- name: Android Auto
   weight: 2
+
+- name: Android SDK
+  weight: 4
