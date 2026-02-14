@@ -11,11 +11,14 @@
 - name: React Native
   weight: 3
 
-- name: Node
-  weight: 1
+- name: Node.js (Express.js)
+  weight: 3
 
 - name: Flutter
-  weight: 2
+  weight: 5
+
+- name: Jetpack Compose
+  weight: 5
   
 - name: Ionic
   weight: 2

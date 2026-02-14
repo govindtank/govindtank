@@ -23,3 +23,12 @@
 - name: Postman
   weight: 3
 
+- name: GitHub Actions
+  weight: 3
+
+- name: Docker
+  weight: 3
+
+- name: AWS CloudFront
+  weight: 3
+

@@ -17,15 +17,35 @@
 #     - tag: Rails
 #   timeline-side: right
 
+- title: Rysun Labs Pvt. Ltd.
+  title-url: https://rysun.com/
+  date: Jan 2025 - Present
+  subtitle: Senior Software Developer L2
+  tags:
+    - tag: Mobile Engineering Lead
+    - tag: Secure Media Streaming (AWS CloudFront)
+    - tag: Backend Architecture (Node.js/TypeScript)
+  timeline-side: left
+
+- title: Rysun Labs Pvt. Ltd.
+  title-url: https://rysun.com/
+  date: Apr 2022 - Dec 2024
+  subtitle: Senior Software Developer / Project Owner
+  tags:
+    - tag: Flutter Architecture
+    - tag: Global Project Delivery
+    - tag: IoT Integration
+  timeline-side: right
+
 - title: Phycom Corporations
   title-url: http://phycominc.com/
-  date: Apr 2021 - Present
-  subtitle: Associate Android Developer
+  date: Apr 2021 - Mar 2022
+  subtitle: Software Engineer - Android
   tags:
     - tag: RxJava2, Dagger
     - tag: IOT application programming
     - tag: Firebase Integration, Application Testing
-  timeline-side: right
+  timeline-side: left
 
 - title: Micro App Solutions
   title-url: http://www.microappsolutions.com/

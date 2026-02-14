@@ -1,5 +1,48 @@
 --- 
 - 
+  demo: ~
+  descr: "Secure audio streaming application with AWS CloudFront Signed Cookies and seamless background playback."
+  name: "BAPS Prakash"
+  tags: 
+    - 
+      tag: Flutter
+    - 
+      tag: "AWS CloudFront"
+    - 
+      tag: "Audio Service"
+    - 
+      tag: "Node.js"
+- 
+  demo: ~
+  descr: "Scaled to 100,000+ downloads with 99.95% crash-free session rate. Built using Clean Architecture and Flutter Bloc."
+  name: "Akshar Amrutam"
+  tags: 
+    - 
+      tag: Flutter
+    - 
+      tag: "Clean Architecture"
+    - 
+      tag: Bloc
+- 
+  demo: ~
+  descr: "IoT hardware companion app implementing real-time MQTT communication."
+  name: "Smartindia/Autozon"
+  tags: 
+    - 
+      tag: IoT
+    - 
+      tag: MQTT
+    - 
+      tag: Flutter
+- 
+  demo: ~
+  descr: "Weather station hardware synchronization app with robust background services."
+  name: "La Crosse View"
+  tags: 
+    - 
+      tag: "Android Native"
+    - 
+      tag: "Background Services" 
   demo: "https://play.google.com/store/apps/details?id=com.heaveninfotech.fastrrr&hl=en"
   descr: "Open more apps at the same time in floating windows and enjoy real multitasking! Don't leave current app for a small task. Fastrrr - Floating Apps is the largest and the most advanced collection of floating mini apps."
   name: "Fastrrr - Floating Apps"
