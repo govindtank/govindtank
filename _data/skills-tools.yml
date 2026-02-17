@@ -5,21 +5,47 @@
 # - name: Git
 #   weight: 5
 
-- name: Git
+- name: Cursor
+  weight: 5
+
+- name: Windsurf
+  weight: 5
+
+- name: Claude Code
   weight: 4
 
-- name: Sublime Text
-  weight: 3
+- name: Anti Gravity
+  weight: 4
 
-- name: Chrome DevTools
-  weight: 3
+- name: Kilo Code
+  weight: 4
 
-- name: npm
-  weight: 2
-  
+- name: Open Claw
+  weight: 4
+
+- name: OpenRouter API
+  weight: 4
+
 - name: Android Studio
   weight: 5
 
-- name: Postman
+- name: GitHub Actions
+  weight: 4
+
+- name: Docker
   weight: 3
 
+- name: Git
+  weight: 5
+
+- name: Gradle
+  weight: 4
+
+- name: Play Store Console
+  weight: 4
+
+- name: Postman
+  weight: 4
+
+- name: AWS CloudFront
+  weight: 3
