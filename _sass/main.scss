@@ -403,6 +403,10 @@ a {
     color: #fecea8;
   }
 
+  div[skill-type="ai"] {
+    color: #00d2d3;
+  }
+
   div[skill-weight="1"] {
     font-size: 0.75rem;
     line-height: 0.25rem;
@@ -711,7 +715,7 @@ a {
       margin: 0 0.5rem 1rem;
       padding: 0.5rem 0.25rem;
       text-align: center;
-      width: 21%;
+      width: 18%;
 
       &:hover {
         letter-spacing: 0.25rem;
@@ -733,17 +737,26 @@ a {
     }
 
     input[id="language"]:checked ~ div[skill-type="framework"],
-    input[id="language"]:checked ~ div[skill-type="tool"] {
+    input[id="language"]:checked ~ div[skill-type="tool"],
+    input[id="language"]:checked ~ div[skill-type="ai"] {
       @include filter-out;
     }
 
     input[id="framework"]:checked ~ div[skill-type="language"],
-    input[id="framework"]:checked ~ div[skill-type="tool"] {
+    input[id="framework"]:checked ~ div[skill-type="tool"],
+    input[id="framework"]:checked ~ div[skill-type="ai"] {
       @include filter-out;
     }
 
     input[id="tool"]:checked ~ div[skill-type="language"],
-    input[id="tool"]:checked ~ div[skill-type="framework"] {
+    input[id="tool"]:checked ~ div[skill-type="framework"],
+    input[id="tool"]:checked ~ div[skill-type="ai"] {
+      @include filter-out;
+    }
+
+    input[id="ai"]:checked ~ div[skill-type="language"],
+    input[id="ai"]:checked ~ div[skill-type="framework"],
+    input[id="ai"]:checked ~ div[skill-type="tool"] {
       @include filter-out;
     }
   }
