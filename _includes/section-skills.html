@@ -1,12 +1,14 @@
 <h1 class="title">{{site.skills_title}}</h1>
 
-<div class="skills-container">
-  <!-- Languages Section -->
-  <div class="skill-section" data-aos="fade-up">
-    <div class="section-header">
-      <span class="category-indicator language-color"></span>
-      <h3>Languages</h3>
-    </div>
+<div class="skills-tabs-container" data-aos="fade-up">
+  <div class="skills-tabs">
+    <button class="tab-button active" onclick="openSkillTab(event, 'languages')">Languages</button>
+    <button class="tab-button" onclick="openSkillTab(event, 'frameworks')">Frameworks</button>
+    <button class="tab-button" onclick="openSkillTab(event, 'tools')">Tools</button>
+    <button class="tab-button" onclick="openSkillTab(event, 'ai')">AI & Next-Gen</button>
+  </div>
+
+  <div id="languages" class="tab-content active" style="display: block;">
     <div class="skill-tags">
       {% for skill in site.data.skills-languages %}
       <span class="skill-tag language-tag">{{ skill.name }}</span>
@@ -14,12 +16,7 @@
     </div>
   </div>
 
-  <!-- Frameworks Section -->
-  <div class="skill-section" data-aos="fade-up" data-aos-delay="100">
-    <div class="section-header">
-      <span class="category-indicator framework-color"></span>
-      <h3>Frameworks</h3>
-    </div>
+  <div id="frameworks" class="tab-content">
     <div class="skill-tags">
       {% for skill in site.data.skills-frameworks %}
       <span class="skill-tag framework-tag">{{ skill.name }}</span>
@@ -27,12 +24,7 @@
     </div>
   </div>
 
-  <!-- Tools Section -->
-  <div class="skill-section" data-aos="fade-up" data-aos-delay="200">
-    <div class="section-header">
-      <span class="category-indicator tool-color"></span>
-      <h3>Tools</h3>
-    </div>
+  <div id="tools" class="tab-content">
     <div class="skill-tags">
       {% for skill in site.data.skills-tools %}
       <span class="skill-tag tool-tag">{{ skill.name }}</span>
@@ -40,12 +32,7 @@
     </div>
   </div>
 
-  <!-- AI & Next-Gen Section -->
-  <div class="skill-section" data-aos="fade-up" data-aos-delay="300">
-    <div class="section-header">
-      <span class="category-indicator ai-color"></span>
-      <h3>AI & Next-Gen</h3>
-    </div>
+  <div id="ai" class="tab-content">
     <div class="skill-tags">
       {% for skill in site.data.skills-ai %}
       <span class="skill-tag ai-tag">{{ skill.name }}</span>
@@ -53,3 +40,24 @@
     </div>
   </div>
 </div>
+
+<script>
+  function openSkillTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].classList.remove("active");
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+    }
+    var activeTab = document.getElementById(tabName);
+    activeTab.style.display = "block";
+    setTimeout(function () {
+      activeTab.classList.add("active");
+    }, 10);
+    evt.currentTarget.classList.add("active");
+  }
+</script>
