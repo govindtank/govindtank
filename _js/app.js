@@ -1,20 +1,20 @@
-setTimeout(function() {
+setTimeout(function () {
   fadeOutPreloader(document.getElementById('preloader'), 69);
 }, 1500);
 
-$(document).ready(function() {
-  $(window).on('beforeunload', function() {
+$(document).ready(function () {
+  $(window).on('beforeunload', function () {
     window.scrollTo(0, 0);
   });
 
   /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
-  particlesJS.load('landing', 'assets/particles.json', function() {});
+  particlesJS.load('landing', 'assets/particles.json', function () { });
 
   // Typing Text
   var element = document.getElementById('txt-rotate');
   var toRotate = element.getAttribute('data-rotate');
   var period = element.getAttribute('data-period');
-  setTimeout(function() {
+  setTimeout(function () {
     new TxtRotate(element, JSON.parse(toRotate), period);
   }, 1500);
 
@@ -43,7 +43,7 @@ $(document).ready(function() {
 function fadeOutPreloader(element, duration) {
   opacity = 1;
 
-  interval = setInterval(function() {
+  interval = setInterval(function () {
     if (opacity <= 0) {
       element.style.zIndex = 0;
       element.style.opacity = 0;
@@ -66,7 +66,7 @@ function fadeOutPreloader(element, duration) {
 
 /* Typing Text */
 
-var TxtRotate = function(el, toRotate, period) {
+var TxtRotate = function (el, toRotate, period) {
   this.toRotate = toRotate;
   this.el = el;
   this.loopNum = 0;
@@ -76,7 +76,7 @@ var TxtRotate = function(el, toRotate, period) {
   this.isDeleting = false;
 };
 
-TxtRotate.prototype.tick = function() {
+TxtRotate.prototype.tick = function () {
   var i = this.loopNum % this.toRotate.length;
   var fullTxt = this.toRotate[i];
 
@@ -103,7 +103,7 @@ TxtRotate.prototype.tick = function() {
     delta = 500;
   }
 
-  setTimeout(function() {
+  setTimeout(function () {
     that.tick();
   }, delta);
 };
@@ -112,6 +112,7 @@ TxtRotate.prototype.tick = function() {
 
 function randomizeOrder() {
   var parent = document.getElementById('skills');
+  if (!parent) return;
   var divs = parent.getElementsByTagName('div');
   var frag = document.createDocumentFragment();
 
