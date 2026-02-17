@@ -382,56 +382,80 @@ a {
 
 /* Skills Section */
 
-.skills-container {
+.skills-tabs-container {
+  margin-top: 1rem;
+}
+
+.skills-tabs {
   display: flex;
-  flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.tab-button {
+  @extend .neumorphism-button;
+  border: none;
+  color: $text-color;
+  padding: 0.8rem 1.8rem;
+  border-radius: 2rem;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  font-family: $font-family;
+  font-weight: 600;
+  font-size: 0.9rem;
+  outline: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05rem;
+
+  &:hover {
+    color: $primary-color;
+    transform: translateY(-3px);
+  }
+
+  &.active {
+    @include neumorphism-button-pressed;
+    color: $primary-color;
+    transform: translateY(0);
+  }
+}
+
+.tab-content {
+  display: none;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.4s ease;
+
+  &.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
   padding: 1rem 0;
 }
 
-.skill-section {
-  .section-header {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
+.skill-tag {
+  display: inline-block;
+  padding: 0.5rem 1.2rem;
+  border-radius: 2rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.3s ease;
+  cursor: default;
 
-    .category-indicator {
-      width: 4px;
-      height: 24px;
-      border-radius: 2px;
-    }
-
-    h3 {
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: $text-color;
-      margin: 0;
-      letter-spacing: 0.05em;
-    }
-  }
-
-  .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-  }
-
-  .skill-tag {
-    display: inline-block;
-    padding: 0.4rem 0.9rem;
-    border-radius: 1rem;
-    font-size: 0.875rem;
-    font-weight: 500;
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.2s ease;
-    cursor: default;
-
-    &:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    }
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
   }
 }
 
