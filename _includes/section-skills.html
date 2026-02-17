@@ -1,36 +1,63 @@
 <h1 class="title">{{site.skills_title}}</h1>
 
-<div id="skills">
-  <input type="radio" id="all" name="filter" />
-  <label class="filter-button neumorphism-button" for="all">All</label>
-  <input type="radio" id="language" name="filter" checked />
-  <label class="filter-button neumorphism-button" for="language">Languages</label>
-  <input type="radio" id="framework" name="filter" />
-  <label class="filter-button neumorphism-button" for="framework">Frameworks</label>
-  <input type="radio" id="tool" name="filter" />
-  <label class="filter-button neumorphism-button" for="tool">Tools</label>
-  <input type="radio" id="ai" name="filter" />
-  <label class="filter-button neumorphism-button" for="ai">AI & Next-Gen</label>
+<div class="skills-wrapper">
+  <!-- Languages -->
+  <div class="skill-category" data-aos="fade-up">
+    <h3 class="category-title">Languages</h3>
+    <div class="skill-list">
+      {% for skill in site.data.skills-languages %}
+      <div class="skill-item">
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-progress-track">
+          <div class="skill-progress-bar" style="width: {{ skill.weight | times: 20 }}%"></div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
 
-  {% for language in site.data.skills-languages %}
-    <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
-      {{language.name}}
+  <!-- Frameworks -->
+  <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+    <h3 class="category-title">Frameworks</h3>
+    <div class="skill-list">
+      {% for skill in site.data.skills-frameworks %}
+      <div class="skill-item">
+        <span class="skill-name">{{ skill.name }}</span>
+         <div class="skill-progress-track">
+          <div class="skill-progress-bar" style="width: {{ skill.weight | times: 20 }}%"></div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-  {% for framework in site.data.skills-frameworks %}
-    <div skill-type="framework" skill-weight="{{framework.weight}}" data-aos="zoom-in">
-      {{framework.name}}
+  </div>
+
+   <!-- Tools -->
+  <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+    <h3 class="category-title">Tools</h3>
+    <div class="skill-list">
+      {% for skill in site.data.skills-tools %}
+      <div class="skill-item">
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-progress-track">
+          <div class="skill-progress-bar" style="width: {{ skill.weight | times: 20 }}%"></div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-  {% for tool in site.data.skills-tools %}
-    <div skill-type="tool" skill-weight="{{tool.weight}}" data-aos="zoom-in">
-      {{tool.name}}
+  </div>
+
+    <!-- AI/Next-Gen -->
+  <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+    <h3 class="category-title">AI & Next-Gen</h3>
+    <div class="skill-list">
+      {% for skill in site.data.skills-ai %}
+      <div class="skill-item">
+        <span class="skill-name">{{ skill.name }}</span>
+        <div class="skill-progress-track">
+          <div class="skill-progress-bar" style="width: {{ skill.weight | times: 20 }}%"></div>
+        </div>
+      </div>
+      {% endfor %}
     </div>
-  {% endfor %}
-  {% for ai in site.data.skills-ai %}
-    <div skill-type="ai" skill-weight="{{ai.weight}}" data-aos="zoom-in">
-      {{ai.name}}
-    </div>
-  {% endfor %}
+  </div>
 </div>
-
