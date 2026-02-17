@@ -5,27 +5,6 @@
 # - name: Git
 #   weight: 5
 
-- name: Cursor
-  weight: 5
-
-- name: Windsurf
-  weight: 5
-
-- name: Claude Code
-  weight: 4
-
-- name: Anti Gravity
-  weight: 4
-
-- name: Kilo Code
-  weight: 4
-
-- name: Open Claw
-  weight: 4
-
-- name: OpenRouter API
-  weight: 4
-
 - name: Android Studio
   weight: 5
 
