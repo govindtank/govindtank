@@ -1,24 +1,55 @@
 <h1 class="title">{{site.skills_title}}</h1>
 
-<div id="skills">
-  {% for language in site.data.skills-languages %}
-  <div class="skill-chip" skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
-    {{language.name}}
+<div class="skills-container">
+  <!-- Languages Section -->
+  <div class="skill-section" data-aos="fade-up">
+    <div class="section-header">
+      <span class="category-indicator language-color"></span>
+      <h3>Languages</h3>
+    </div>
+    <div class="skill-tags">
+      {% for skill in site.data.skills-languages %}
+      <span class="skill-tag language-tag">{{ skill.name }}</span>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
-  {% for framework in site.data.skills-frameworks %}
-  <div class="skill-chip" skill-type="framework" skill-weight="{{framework.weight}}" data-aos="zoom-in">
-    {{framework.name}}
+
+  <!-- Frameworks Section -->
+  <div class="skill-section" data-aos="fade-up" data-aos-delay="100">
+    <div class="section-header">
+      <span class="category-indicator framework-color"></span>
+      <h3>Frameworks</h3>
+    </div>
+    <div class="skill-tags">
+      {% for skill in site.data.skills-frameworks %}
+      <span class="skill-tag framework-tag">{{ skill.name }}</span>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
-  {% for tool in site.data.skills-tools %}
-  <div class="skill-chip" skill-type="tool" skill-weight="{{tool.weight}}" data-aos="zoom-in">
-    {{tool.name}}
+
+  <!-- Tools Section -->
+  <div class="skill-section" data-aos="fade-up" data-aos-delay="200">
+    <div class="section-header">
+      <span class="category-indicator tool-color"></span>
+      <h3>Tools</h3>
+    </div>
+    <div class="skill-tags">
+      {% for skill in site.data.skills-tools %}
+      <span class="skill-tag tool-tag">{{ skill.name }}</span>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
-  {% for ai in site.data.skills-ai %}
-  <div class="skill-chip" skill-type="ai" skill-weight="{{ai.weight}}" data-aos="zoom-in">
-    {{ai.name}}
+
+  <!-- AI & Next-Gen Section -->
+  <div class="skill-section" data-aos="fade-up" data-aos-delay="300">
+    <div class="section-header">
+      <span class="category-indicator ai-color"></span>
+      <h3>AI & Next-Gen</h3>
+    </div>
+    <div class="skill-tags">
+      {% for skill in site.data.skills-ai %}
+      <span class="skill-tag ai-tag">{{ skill.name }}</span>
+      {% endfor %}
+    </div>
   </div>
-  {% endfor %}
 </div>
