@@ -1,7 +1,51 @@
 --- 
 - 
+  demo: ~
+  descr: "Secure audio streaming application with AWS CloudFront Signed Cookies and seamless background playback."
+  name: "BAPS Prakash"
+  tags: 
+    - 
+      tag: Flutter
+    - 
+      tag: "AWS CloudFront"
+    - 
+      tag: "Audio Service"
+    - 
+      tag: "Node.js"
+- 
+  demo: ~
+  descr: "Scaled to 100,000+ downloads with 99.95% crash-free session rate. Built using Clean Architecture and Flutter Bloc."
+  name: "Akshar Amrutam"
+  tags: 
+    - 
+      tag: Flutter
+    - 
+      tag: "Clean Architecture"
+    - 
+      tag: Bloc
+- 
+  demo: ~
+  descr: "IoT hardware companion app implementing real-time MQTT communication."
+  name: "Smartindia/Autozon"
+  tags: 
+    - 
+      tag: IoT
+    - 
+      tag: MQTT
+    - 
+      tag: Flutter
+- 
+  demo: ~
+  descr: "Weather station hardware synchronization app with robust background services."
+  name: "La Crosse View"
+  tags: 
+    - 
+      tag: "Android Native"
+    - 
+      tag: "Background Services" 
+-
   demo: "https://play.google.com/store/apps/details?id=com.heaveninfotech.fastrrr&hl=en"
-  descr: "Open more apps at the same time in floating windows and enjoy real multitasking! Don't leave current app for a small task. Fastrrr - Floating Apps is the largest and the most advanced collection of floating mini apps."
+  descr: "Open more apps at the same time in floating windows and enjoy real multitasking! Don't leave current app for a small task."
   name: "Fastrrr - Floating Apps"
   tags: 
     - 
@@ -9,7 +53,18 @@
     - 
       tag: Java
     - 
-      tag: "Third Party Library (StandOut)"
+      tag: "Floating Windows"
+-
+  demo: ~
+  descr: "Utility application implementing complex overlay window permissions while maintaining strict battery efficiency protocols."
+  name: "Water Reminder"
+  tags: 
+    - 
+      tag: Android
+    - 
+      tag: Java
+    - 
+      tag: Utility
 - 
   demo: "https://play.google.com/store/apps/details?id=com.offerzone&hl=en"
   descr: "OfferzZone is Hyper Local Market Application that provides information regarding nearby stores' latest offers and discounts."
@@ -19,9 +74,11 @@
       tag: "Android SDK"
     - 
       tag: Retrofit
+    - 
+      tag: Geofencing
 - 
   demo: "https://play.google.com/store/apps/details?id=stimulus.citytadka&hl=en"
-  descr: "CityTadka is the one stop solution for a city to know its people, places, and stories. Discover some amazing unexplored places of the city, find food, fashion, and hangouts, explore city’s gems – the people, get to know about the events and shows – everything in one app."
+  descr: "CityTadka is the one stop solution for a city to know its people, places, and stories."
   name: CityTadka
   tags: 
     - 
@@ -30,16 +87,25 @@
       tag: Retrofit
     - 
       tag: Picasso
+-
+  demo: ~
+  descr: "Established initial CI/CD pipelines and repository structures, reducing deployment friction in early-stage development."
+  name: Oowomaniya
+  tags: 
+    - 
+      tag: Android
+    - 
+      tag: "CI/CD"
+    - 
+      tag: Startup
 - 
   demo: ~
-  descr: "Developed Management System for private individual reputed company which includes some feautures like; product management, employee management, order/service management."
-  name: "Employee cum Company Management System"
+  descr: "Developed Management System for private individual reputed company which includes product management, employee management, and order services."
+  name: "Company Management System"
   tags: 
     - 
       tag: Angular
     - 
       tag: "REST Api"
     - 
-      tag: "Product Development and Management"
-    - 
-      tag: "Client Engagement and Consultance"
+      tag: "Product Management"
