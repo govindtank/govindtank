@@ -5,30 +5,26 @@
 # - name: Git
 #   weight: 5
 
-- name: Git
-  weight: 4
-
-- name: Sublime Text
-  weight: 3
-
-- name: Chrome DevTools
-  weight: 3
-
-- name: npm
-  weight: 2
-  
 - name: Android Studio
   weight: 5
 
-- name: Postman
-  weight: 3
-
 - name: GitHub Actions
-  weight: 3
+  weight: 4
 
 - name: Docker
   weight: 3
 
+- name: Git
+  weight: 5
+
+- name: Gradle
+  weight: 4
+
+- name: Play Store Console
+  weight: 4
+
+- name: Postman
+  weight: 4
+
 - name: AWS CloudFront
   weight: 3
-

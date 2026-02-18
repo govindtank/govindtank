@@ -1,28 +1,63 @@
 <h1 class="title">{{site.skills_title}}</h1>
 
-<div id="skills">
-  <input type="radio" id="all" name="filter" checked />
-  <label class="filter-button neumorphism-button" for="all">All</label>
-  <input type="radio" id="language" name="filter" />
-  <label class="filter-button neumorphism-button" for="language">Languages</label>
-  <input type="radio" id="framework" name="filter" />
-  <label class="filter-button neumorphism-button" for="framework">Frameworks</label>
-  <input type="radio" id="tool" name="filter" />
-  <label class="filter-button neumorphism-button" for="tool">Tools</label>
+<div class="skills-tabs-container" data-aos="fade-up">
+  <div class="skills-tabs">
+    <button class="tab-button active" onclick="openSkillTab(event, 'languages')">Languages</button>
+    <button class="tab-button" onclick="openSkillTab(event, 'frameworks')">Frameworks</button>
+    <button class="tab-button" onclick="openSkillTab(event, 'tools')">Tools</button>
+    <button class="tab-button" onclick="openSkillTab(event, 'ai')">AI & Next-Gen</button>
+  </div>
 
-  {% for language in site.data.skills-languages %}
-    <div skill-type="language" skill-weight="{{language.weight}}" data-aos="zoom-in">
-      {{language.name}}
+  <div id="languages" class="tab-content active" style="display: block;">
+    <div class="skill-tags">
+      {% for skill in site.data.skills-languages %}
+      <span class="skill-tag language-tag">{{ skill.name }}</span>
+      {% endfor %}
     </div>
-  {% endfor %}
-  {% for framework in site.data.skills-frameworks %}
-    <div skill-type="framework" skill-weight="{{framework.weight}}" data-aos="zoom-in">
-      {{framework.name}}
+  </div>
+
+  <div id="frameworks" class="tab-content">
+    <div class="skill-tags">
+      {% for skill in site.data.skills-frameworks %}
+      <span class="skill-tag framework-tag">{{ skill.name }}</span>
+      {% endfor %}
     </div>
-  {% endfor %}
-  {% for tool in site.data.skills-tools %}
-    <div skill-type="tool" skill-weight="{{tool.weight}}" data-aos="zoom-in">
-      {{tool.name}}
+  </div>
+
+  <div id="tools" class="tab-content">
+    <div class="skill-tags">
+      {% for skill in site.data.skills-tools %}
+      <span class="skill-tag tool-tag">{{ skill.name }}</span>
+      {% endfor %}
     </div>
-  {% endfor %}
+  </div>
+
+  <div id="ai" class="tab-content">
+    <div class="skill-tags">
+      {% for skill in site.data.skills-ai %}
+      <span class="skill-tag ai-tag">{{ skill.name }}</span>
+      {% endfor %}
+    </div>
+  </div>
 </div>
+
+<script>
+  function openSkillTab(evt, tabName) {
+    var i, tabcontent, tablinks;
+    tabcontent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].classList.remove("active");
+      tabcontent[i].style.display = "none";
+    }
+    tablinks = document.getElementsByClassName("tab-button");
+    for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].classList.remove("active");
+    }
+    var activeTab = document.getElementById(tabName);
+    activeTab.style.display = "block";
+    setTimeout(function () {
+      activeTab.classList.add("active");
+    }, 10);
+    evt.currentTarget.classList.add("active");
+  }
+</script>

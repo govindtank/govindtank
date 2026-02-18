@@ -5,38 +5,65 @@
 # - name: Framework
 #   weight: 5
 
-- name: Kotlin
-  weight: 5
-
-- name: Dart
-  weight: 5
-
-- name: Node.js (Express.js)
-  weight: 3
-
-- name: Express.js
-  weight: 2
-
-- name: TypeScript
-  weight: 3
-
-- name: Firebase
-  weight: 5
-
-- name: Flutter
+- name: Android SDK
   weight: 5
 
 - name: Jetpack Compose
   weight: 5
-  
-- name: Java
+
+- name: Flutter Bloc
   weight: 5
 
-- name: Android
+- name: Clean Architecture
   weight: 5
+
+- name: MVVM / MVI
+  weight: 5
+
+- name: Dagger Hilt / Koin
+  weight: 5
+
+- name: Coroutines & State Flow
+  weight: 5
+
+- name: LiveData
+  weight: 4
+
+- name: Provider
+  weight: 4
+
+- name: AutoRoute
+  weight: 4
+
+- name: Freezed
+  weight: 4
+
+- name: Method Channels
+  weight: 4
+
+- name: audio_service
+  weight: 4
+
+- name: Equatable
+  weight: 4
+
+- name: Node.js (Express.js)
+  weight: 4
+
+- name: Firebase
+  weight: 5
+
+- name: GraphQL
+  weight: 3
 
 - name: Android Auto
-  weight: 2
+  weight: 4
 
-- name: Android SDK
+- name: Material 3
+  weight: 4
+
+- name: WorkManager
+  weight: 4
+
+- name: RESTful APIs
   weight: 4

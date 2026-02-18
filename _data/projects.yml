@@ -43,8 +43,12 @@
       tag: "Android Native"
     - 
       tag: "Background Services" 
+<<<<<<< HEAD
+=======
+-
+>>>>>>> e3f4be0af7bb4639df466c5437c0f34413fd7750
   demo: "https://play.google.com/store/apps/details?id=com.heaveninfotech.fastrrr&hl=en"
-  descr: "Open more apps at the same time in floating windows and enjoy real multitasking! Don't leave current app for a small task. Fastrrr - Floating Apps is the largest and the most advanced collection of floating mini apps."
+  descr: "Open more apps at the same time in floating windows and enjoy real multitasking! Don't leave current app for a small task."
   name: "Fastrrr - Floating Apps"
   tags: 
     - 
@@ -52,7 +56,18 @@
     - 
       tag: Java
     - 
-      tag: "Third Party Library (StandOut)"
+      tag: "Floating Windows"
+-
+  demo: ~
+  descr: "Utility application implementing complex overlay window permissions while maintaining strict battery efficiency protocols."
+  name: "Water Reminder"
+  tags: 
+    - 
+      tag: Android
+    - 
+      tag: Java
+    - 
+      tag: Utility
 - 
   demo: "https://play.google.com/store/apps/details?id=com.offerzone&hl=en"
   descr: "OfferzZone is Hyper Local Market Application that provides information regarding nearby stores' latest offers and discounts."
@@ -62,9 +77,11 @@
       tag: "Android SDK"
     - 
       tag: Retrofit
+    - 
+      tag: Geofencing
 - 
   demo: "https://play.google.com/store/apps/details?id=stimulus.citytadka&hl=en"
-  descr: "CityTadka is the one stop solution for a city to know its people, places, and stories. Discover some amazing unexplored places of the city, find food, fashion, and hangouts, explore city’s gems – the people, get to know about the events and shows – everything in one app."
+  descr: "CityTadka is the one stop solution for a city to know its people, places, and stories."
   name: CityTadka
   tags: 
     - 
@@ -73,16 +90,25 @@
       tag: Retrofit
     - 
       tag: Picasso
+-
+  demo: ~
+  descr: "Established initial CI/CD pipelines and repository structures, reducing deployment friction in early-stage development."
+  name: Oowomaniya
+  tags: 
+    - 
+      tag: Android
+    - 
+      tag: "CI/CD"
+    - 
+      tag: Startup
 - 
   demo: ~
-  descr: "Developed Management System for private individual reputed company which includes some feautures like; product management, employee management, order/service management."
-  name: "Employee cum Company Management System"
+  descr: "Developed Management System for private individual reputed company which includes product management, employee management, and order services."
+  name: "Company Management System"
   tags: 
     - 
       tag: Angular
     - 
       tag: "REST Api"
     - 
-      tag: "Product Development and Management"
-    - 
-      tag: "Client Engagement and Consultance"
+      tag: "Product Management"
