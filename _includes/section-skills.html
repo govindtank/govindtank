@@ -1,67 +1,146 @@
 <h1 class="title">{{site.skills_title}}</h1>
 
-<div class="skills-tabs-container" data-aos="fade-up">
-  <div class="skills-tabs">
-    <button class="tab-button active" onclick="openSkillTab(event, 'languages')">Languages</button>
-    <button class="tab-button" onclick="openSkillTab(event, 'frameworks')">Frameworks</button>
-    <button class="tab-button" onclick="openSkillTab(event, 'tools')">Tools</button>
-    <button class="tab-button" onclick="openSkillTab(event, 'ai')">AI & Next-Gen</button>
-  </div>
-
-  <div id="languages" class="tab-content active" style="display: block;">
-    <div class="skill-tags">
-      {% for skill in site.data.skills-languages %}
-      <span class="skill-tag language-tag">{{ skill.name }}</span>
-      {% endfor %}
+<div class="skills-section" data-aos="fade-up">
+  <!-- Category Tabs -->
+  <div class="skills-tabs-wrapper">
+    <div class="skills-tabs">
+      <button class="skill-tab active" data-tab="languages" onclick="openSkillTab(event, 'languages')">
+        <span class="tab-icon">💻</span>
+        <span class="tab-text">Languages</span>
+      </button>
+      <button class="skill-tab" data-tab="frameworks" onclick="openSkillTab(event, 'frameworks')">
+        <span class="tab-icon">🏗️</span>
+        <span class="tab-text">Frameworks</span>
+      </button>
+      <button class="skill-tab" data-tab="tools" onclick="openSkillTab(event, 'tools')">
+        <span class="tab-icon">🛠️</span>
+        <span class="tab-text">Tools</span>
+      </button>
+      <button class="skill-tab" data-tab="ai" onclick="openSkillTab(event, 'ai')">
+        <span class="tab-icon">🤖</span>
+        <span class="tab-text">AI & Next-Gen</span>
+      </button>
     </div>
   </div>
 
-  <div id="frameworks" class="tab-content">
-    <div class="skill-tags">
-      {% for skill in site.data.skills-frameworks %}
-      <span class="skill-tag framework-tag">{{ skill.name }}</span>
-      {% endfor %}
+  <!-- Skills Content -->
+  <div class="skills-content">
+    <!-- Languages -->
+    <div id="languages" class="skills-panel active">
+      <div class="skills-grid">
+        {% for skill in site.data.skills-languages %}
+        <div class="skill-card" data-weight="{{ skill.weight }}">
+          <div class="skill-icon-wrapper">
+            <span class="skill-emoji">⚡</span>
+          </div>
+          <div class="skill-info">
+            <h3 class="skill-name">{{ skill.name }}</h3>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: {{ skill.weight | times: 20 }}%;"></div>
+              </div>
+              <span class="skill-label">{{ skill.weight }}/5</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div id="tools" class="tab-content">
-    <div class="skill-tags">
-      {% for skill in site.data.skills-tools %}
-      <span class="skill-tag tool-tag">{{ skill.name }}</span>
-      {% endfor %}
+    <!-- Frameworks -->
+    <div id="frameworks" class="skills-panel">
+      <div class="skills-grid">
+        {% for skill in site.data.skills-frameworks %}
+        <div class="skill-card" data-weight="{{ skill.weight }}">
+          <div class="skill-icon-wrapper">
+            <span class="skill-emoji">🚀</span>
+          </div>
+          <div class="skill-info">
+            <h3 class="skill-name">{{ skill.name }}</h3>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: {{ skill.weight | times: 20 }}%;"></div>
+              </div>
+              <span class="skill-label">{{ skill.weight }}/5</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
-  </div>
 
-  <div id="ai" class="tab-content">
-    <div class="skill-tags">
-      {% for skill in site.data.skills-ai %}
-      <span class="skill-tag ai-tag">{{ skill.name }}</span>
-      {% endfor %}
+    <!-- Tools -->
+    <div id="tools" class="skills-panel">
+      <div class="skills-grid">
+        {% for skill in site.data.skills-tools %}
+        <div class="skill-card" data-weight="{{ skill.weight }}">
+          <div class="skill-icon-wrapper">
+            <span class="skill-emoji">🔧</span>
+          </div>
+          <div class="skill-info">
+            <h3 class="skill-name">{{ skill.name }}</h3>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: {{ skill.weight | times: 20 }}%;"></div>
+              </div>
+              <span class="skill-label">{{ skill.weight }}/5</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- AI & Next-Gen -->
+    <div id="ai" class="skills-panel">
+      <div class="skills-grid">
+        {% for skill in site.data.skills-ai %}
+        <div class="skill-card" data-weight="{{ skill.weight }}">
+          <div class="skill-icon-wrapper">
+            <span class="skill-emoji">✨</span>
+          </div>
+          <div class="skill-info">
+            <h3 class="skill-name">{{ skill.name }}</h3>
+            <div class="skill-level">
+              <div class="skill-bar">
+                <div class="skill-progress" style="width: {{ skill.weight | times: 20 }}%;"></div>
+              </div>
+              <span class="skill-label">{{ skill.weight }}/5</span>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
     </div>
   </div>
 </div>
 
 <script>
   function openSkillTab(evt, tabName) {
-    var i, tabcontent, tablinks;
-    tabcontent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabcontent.length; i++) {
-      tabcontent[i].classList.remove("active");
-      tabcontent[i].style.display = "none";
-    }
-    tablinks = document.getElementsByClassName("tab-button");
-    for (i = 0; i < tablinks.length; i++) {
-      tablinks[i].classList.remove("active");
-    }
-    var activeTab = document.getElementById(tabName);
-    activeTab.style.display = "block";
-    setTimeout(function () {
-      activeTab.classList.add("active");
+    // Hide all panels
+    const panels = document.querySelectorAll('.skills-panel');
+    panels.forEach(panel => {
+      panel.classList.remove('active');
+      panel.style.opacity = '0';
+      panel.style.transform = 'translateY(20px)';
+    });
+
+    // Remove active class from all tabs
+    const tabs = document.querySelectorAll('.skill-tab');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Show selected panel
+    const activePanel = document.getElementById(tabName);
+    activePanel.style.display = 'block';
+
+    // Trigger animation
+    setTimeout(() => {
+      activePanel.classList.add('active');
+      activePanel.style.opacity = '1';
+      activePanel.style.transform = 'translateY(0)';
     }, 10);
-    evt.currentTarget.classList.add("active");
+
+    // Add active class to clicked tab
+    evt.currentTarget.classList.add('active');
   }
-<<<<<<< HEAD
 </script>
-=======
-</script>
->>>>>>> e21ead5b06342032bd9320fb9e5e90514400a837
