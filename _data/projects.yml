@@ -42,11 +42,8 @@
     - 
       tag: "Android Native"
     - 
-      tag: "Background Services" 
-<<<<<<< HEAD
-=======
+      tag: "Background Services"
 -
->>>>>>> e3f4be0af7bb4639df466c5437c0f34413fd7750
   demo: "https://play.google.com/store/apps/details?id=com.heaveninfotech.fastrrr&hl=en"
   descr: "Open more apps at the same time in floating windows and enjoy real multitasking! Don't leave current app for a small task."
   name: "Fastrrr - Floating Apps"
