@@ -9,14 +9,13 @@
       }
       .sg   { font-family:'Space Grotesk',system-ui,sans-serif; }
       .mono { font-family:'JetBrains Mono','Fira Code','SF Mono',Menlo,monospace; }
-      .title{ fill:#e6edf3; font-size:30px; font-weight:700; letter-spacing:1px; }
+      .title{ fill:url(#headGrad); font-size:30px; font-weight:700; letter-spacing:1.5px; }
       .sub  { fill:#8b949e; font-size:14px; }
-      .name { fill:#e6edf3; font-size:19px; font-weight:600; }
+      .name { fill:#e6edf3; font-size:17px; font-weight:600; }
       .ver  { fill:#020617; font-size:11px; font-weight:700; }
       .code { fill:#79c0ff; font-size:12.5px; }
       .tag  { fill:#8b949e; font-size:12px; }
       .ok   { fill:#27c93f; font-size:12.5px; font-weight:600; }
-      .pct  { fill:#d2a8ff; font-size:15px; font-weight:700; }
     </style>
     <linearGradient id="headGrad" x1="0" y1="0" x2="1" y2="0">
       <stop offset="0" stop-color="#22d3ee"/><stop offset="0.5" stop-color="#7ee787"/><stop offset="1" stop-color="#f778ba"/>
@@ -25,105 +24,97 @@
     <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7ee787"/><stop offset="1" stop-color="#39d353"/></linearGradient>
     <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#f778ba"/><stop offset="1" stop-color="#fb7185"/></linearGradient>
     <linearGradient id="g4" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#d2a8ff"/><stop offset="1" stop-color="#a78bfa"/></linearGradient>
-    <filter id="cardGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="8" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
   </defs>
 
   <!-- header -->
-  <text class="sg title" x="20" y="44" fill="url(#headGrad)">shipped libraries</text>
-  <text class="sg sub" x="22" y="70">published &amp; maintained on pub.dev — score-optimized to 160/160</text>
-  <line x1="20" y1="84" x2="760" y2="84" stroke="#21262d"/>
-  <line x1="20" y1="84" x2="0" y2="84" stroke="url(#headGrad)" stroke-width="2">
-    <animate attributeName="x2" from="20" to="760" dur="1.6s" begin="0.4s" fill="freeze"/>
+  <text class="sg title" x="20" y="46">THE ARSENAL</text>
+  <text class="sg sub" x="22" y="72">4 published packages · combined pana 640/640 · zero native deps · all in production</text>
+  <line x1="20" y1="88" x2="760" y2="88" stroke="#21262d"/>
+  <line x1="20" y1="88" x2="20" y2="88" stroke="url(#headGrad)" stroke-width="2">
+    <animate attributeName="x2" from="20" to="760" dur="1.4s" begin="0.4s" fill="freeze"/>
   </line>
 
   <!-- card 1 -->
-  <g transform="translate(20,104)">
-    <rect width="364" height="196" rx="14" fill="#161b22" stroke="#30363d"/>
-    <rect width="364" height="5" rx="3" fill="url(#g1)">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="0.8s" fill="freeze"/>
-    </rect>
-    <rect x="12" y="22" width="46" height="46" rx="10" fill="#0ea5e9" opacity="0.18">
+  <g transform="translate(20,108)">
+    <rect width="364" height="200" rx="14" fill="#161b22" stroke="#30363d"/>
+    <rect width="364" height="5" rx="3" fill="url(#g1)"/>
+    <rect x="14" y="26" width="40" height="40" rx="10" fill="#0ea5e9" opacity="0.18">
       <animate attributeName="opacity" values="0.18;0.4;0.18" dur="3s" repeatCount="indefinite"/>
     </rect>
-    <text x="26" y="51" font-size="20" fill="#22d3ee" text-anchor="middle">&#9745;</text>
-    <text class="sg name" x="70" y="44">country_mobile_validator</text>
-    <text class="sg ver" x="300" y="44">v0.2.0</text>
-    <text class="mono code" x="12" y="84">validateForCountry("IN","98765 43210")</text>
-    <text class="mono code" x="12" y="104">isMobileLength("IN", 10)  // true</text>
-    <text class="mono ok" x="12" y="132">160/160</text>
-    <text class="mono pct" x="200" y="132">&#10003;</text>
-    <rect x="12" y="144" width="0" height="5" rx="3" fill="url(#g1)">
-      <animate attributeName="width" from="0" to="340" dur="1s" begin="1.2s" fill="freeze"/>
+    <text x="34" y="53" font-size="18" fill="#22d3ee" text-anchor="middle">&#9745;</text>
+    <text class="sg name" x="66" y="48">country_mobile_validator</text>
+    <rect x="272" y="30" width="74" height="22" rx="11" fill="url(#g1)"/>
+    <text class="sg ver" x="309" y="45" text-anchor="middle">v0.2.0</text>
+    <line x1="14" y1="70" x2="350" y2="70" stroke="#21262d"/>
+    <text class="mono code" x="14" y="94">validateForCountry("IN","98765 43210")</text>
+    <text class="mono code" x="14" y="114">isMobileLength("IN", 10)   // true</text>
+    <text class="mono ok" x="14" y="150">pana 160/160</text>
+    <rect x="14" y="160" width="0" height="5" rx="3" fill="url(#g1)">
+      <animate attributeName="width" from="0" to="336" dur="1s" begin="1.2s" fill="freeze"/>
     </rect>
-    <text class="mono tag" x="12" y="178">zero native deps · libphonenumber metadata · mobile-only</text>
+    <text class="mono tag" x="14" y="188">zero native deps · libphonenumber metadata · mobile-only</text>
   </g>
 
   <!-- card 2 -->
-  <g transform="translate(396,104)">
-    <rect width="364" height="196" rx="14" fill="#161b22" stroke="#30363d"/>
-    <rect width="364" height="5" rx="3" fill="url(#g2)">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1s" fill="freeze"/>
-    </rect>
-    <rect x="12" y="22" width="46" height="46" rx="10" fill="#39d353" opacity="0.18">
+  <g transform="translate(396,108)">
+    <rect width="364" height="200" rx="14" fill="#161b22" stroke="#30363d"/>
+    <rect width="364" height="5" rx="3" fill="url(#g2)"/>
+    <rect x="14" y="26" width="40" height="40" rx="10" fill="#39d353" opacity="0.18">
       <animate attributeName="opacity" values="0.18;0.4;0.18" dur="3s" begin="0.5s" repeatCount="indefinite"/>
     </rect>
-    <text x="26" y="51" font-size="20" fill="#7ee787" text-anchor="middle">&#9835;</text>
-    <text class="sg name" x="70" y="44">flutter_whisper</text>
-    <text class="sg ver" x="300" y="44">v0.1.0</text>
-    <text class="mono code" x="12" y="84">WhisperStream.start(audioBytes)</text>
-    <text class="mono code" x="12" y="104">stream.listen(onPartial, onCancel)</text>
-    <text class="mono ok" x="12" y="132">160/160</text>
-    <text class="mono pct" x="200" y="132">&#10003;</text>
-    <rect x="12" y="144" width="0" height="5" rx="3" fill="url(#g2)">
-      <animate attributeName="width" from="0" to="340" dur="1s" begin="1.4s" fill="freeze"/>
+    <text x="34" y="53" font-size="18" fill="#7ee787" text-anchor="middle">&#9835;</text>
+    <text class="sg name" x="66" y="48">flutter_whisper</text>
+    <rect x="272" y="30" width="74" height="22" rx="11" fill="url(#g2)"/>
+    <text class="sg ver" x="309" y="45" text-anchor="middle">v0.1.0</text>
+    <line x1="14" y1="70" x2="350" y2="70" stroke="#21262d"/>
+    <text class="mono code" x="14" y="94">WhisperStream.start(audioBytes)</text>
+    <text class="mono code" x="14" y="114">stream.listen(onPartial, onCancel)</text>
+    <text class="mono ok" x="14" y="150">pana 160/160</text>
+    <rect x="14" y="160" width="0" height="5" rx="3" fill="url(#g2)">
+      <animate attributeName="width" from="0" to="336" dur="1s" begin="1.4s" fill="freeze"/>
     </rect>
-    <text class="mono tag" x="12" y="178">whisper.cpp bridge · offline STT · streaming + cancel</text>
+    <text class="mono tag" x="14" y="188">whisper.cpp bridge · offline STT · streaming + cancel</text>
   </g>
 
   <!-- card 3 -->
-  <g transform="translate(20,320)">
-    <rect width="364" height="196" rx="14" fill="#161b22" stroke="#30363d"/>
-    <rect width="364" height="5" rx="3" fill="url(#g3)">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.2s" fill="freeze"/>
-    </rect>
-    <rect x="12" y="22" width="46" height="46" rx="10" fill="#fb7185" opacity="0.18">
+  <g transform="translate(20,328)">
+    <rect width="364" height="200" rx="14" fill="#161b22" stroke="#30363d"/>
+    <rect width="364" height="5" rx="3" fill="url(#g3)"/>
+    <rect x="14" y="26" width="40" height="40" rx="10" fill="#fb7185" opacity="0.18">
       <animate attributeName="opacity" values="0.18;0.4;0.18" dur="3s" begin="1s" repeatCount="indefinite"/>
     </rect>
-    <text x="26" y="51" font-size="20" fill="#f778ba" text-anchor="middle">&#8764;</text>
-    <text class="sg name" x="70" y="44">waveform_pro</text>
-    <text class="sg ver" x="300" y="44">v1.0.0</text>
-    <text class="mono code" x="12" y="84">WaveformView(painter: GpuPainter())</text>
-    <text class="mono code" x="12" y="104">controller.zoomTo(60fps, region)</text>
-    <text class="mono ok" x="12" y="132">160/160</text>
-    <text class="mono pct" x="200" y="132">&#10003;</text>
-    <rect x="12" y="144" width="0" height="5" rx="3" fill="url(#g3)">
-      <animate attributeName="width" from="0" to="340" dur="1s" begin="1.6s" fill="freeze"/>
+    <text x="34" y="53" font-size="18" fill="#f778ba" text-anchor="middle">&#8764;</text>
+    <text class="sg name" x="66" y="48">waveform_pro</text>
+    <rect x="272" y="30" width="74" height="22" rx="11" fill="url(#g3)"/>
+    <text class="sg ver" x="309" y="45" text-anchor="middle">v1.0.0</text>
+    <line x1="14" y1="70" x2="350" y2="70" stroke="#21262d"/>
+    <text class="mono code" x="14" y="94">WaveformView(painter: GpuPainter())</text>
+    <text class="mono code" x="14" y="114">controller.zoomTo(60fps, region)</text>
+    <text class="mono ok" x="14" y="150">pana 160/160</text>
+    <rect x="14" y="160" width="0" height="5" rx="3" fill="url(#g3)">
+      <animate attributeName="width" from="0" to="336" dur="1s" begin="1.6s" fill="freeze"/>
     </rect>
-    <text class="mono tag" x="12" y="178">GPU shader rasterizer · 60fps zoom · peak markers</text>
+    <text class="mono tag" x="14" y="188">GPU shader rasterizer · 60fps zoom · peak markers</text>
   </g>
 
   <!-- card 4 -->
-  <g transform="translate(396,320)">
-    <rect width="364" height="196" rx="14" fill="#161b22" stroke="#30363d"/>
-    <rect width="364" height="5" rx="3" fill="url(#g4)">
-      <animate attributeName="opacity" values="0;1" dur="0.5s" begin="1.4s" fill="freeze"/>
-    </rect>
-    <rect x="12" y="22" width="46" height="46" rx="10" fill="#a78bfa" opacity="0.18">
+  <g transform="translate(396,328)">
+    <rect width="364" height="200" rx="14" fill="#161b22" stroke="#30363d"/>
+    <rect width="364" height="5" rx="3" fill="url(#g4)"/>
+    <rect x="14" y="26" width="40" height="40" rx="10" fill="#a78bfa" opacity="0.18">
       <animate attributeName="opacity" values="0.18;0.4;0.18" dur="3s" begin="1.5s" repeatCount="indefinite"/>
     </rect>
-    <text x="26" y="51" font-size="20" fill="#d2a8ff" text-anchor="middle">&#8220;</text>
-    <text class="sg name" x="70" y="44">quote_painter</text>
-    <text class="sg ver" x="300" y="44">v0.1.0</text>
-    <text class="mono code" x="12" y="84">QuoteCanvas.render("Code is poetry")</text>
-    <text class="mono code" x="12" y="104">..withGradient()..withShadow()</text>
-    <text class="mono ok" x="12" y="132">160/160</text>
-    <text class="mono pct" x="200" y="132">&#10003;</text>
-    <rect x="12" y="144" width="0" height="5" rx="3" fill="url(#g4)">
-      <animate attributeName="width" from="0" to="340" dur="1s" begin="1.8s" fill="freeze"/>
+    <text x="34" y="53" font-size="18" fill="#d2a8ff" text-anchor="middle">&#8220;</text>
+    <text class="sg name" x="66" y="48">quote_painter</text>
+    <rect x="272" y="30" width="74" height="22" rx="11" fill="url(#g4)"/>
+    <text class="sg ver" x="309" y="45" text-anchor="middle">v0.1.0</text>
+    <line x1="14" y1="70" x2="350" y2="70" stroke="#21262d"/>
+    <text class="mono code" x="14" y="94">QuoteCanvas.render("Code is poetry")</text>
+    <text class="mono code" x="14" y="114">..withGradient()..withShadow()</text>
+    <text class="mono ok" x="14" y="150">pana 160/160</text>
+    <rect x="14" y="160" width="0" height="5" rx="3" fill="url(#g4)">
+      <animate attributeName="width" from="0" to="336" dur="1s" begin="1.8s" fill="freeze"/>
     </rect>
-    <text class="mono tag" x="12" y="178">text-on-canvas engine · gradient · stroke · PNG export</text>
+    <text class="mono tag" x="14" y="188">text-on-canvas engine · gradient · stroke · PNG export</text>
   </g>
 </svg>

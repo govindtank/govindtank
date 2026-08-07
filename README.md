@@ -10,7 +10,7 @@
 
 ---
 
-## Shipped Libraries
+## The Arsenal — Published Packages
 
 <img src="assets/library-demo.svg" width="780" alt="Published Flutter libraries with live API demos" style="max-width:100%; border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
@@ -30,28 +30,6 @@ WaveformView(painter: GpuPainter(), controller: ctrl)..ctrl.zoomTo(60fps, region
 // 4. Render gradient, stroked, shadowed quote images straight to canvas
 QuoteCanvas.render("Code is poetry").withGradient().withShadow().exportPng();
 ```
-
----
-
-## Automation Status
-
-<div style="display:flex; gap:20px; justify-content:center; margin-top:24px; flex-wrap:wrap;">
-  <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
-    <strong style="display:block; margin-bottom:8px;">📊 stock-scanner</strong>
-    <span style="color:#27c93f; font-size:14px;">● 4× daily IST</span>
-    <span style="color:#8b949e; font-size:12px; margin-top:6px;">Telegram delivery</span>
-  </div>
-  <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
-    <strong style="display:block; margin-bottom:8px;">🔁 readme-refresh</strong>
-    <span style="color:#27c93f; font-size:14px;">● 4× daily</span>
-    <span style="color:#8b949e; font-size:12px; margin-top:6px;">Activity feed</span>
-  </div>
-  <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
-    <strong style="display:block; margin-bottom:8px;">🔬 pub.dev checker</strong>
-    <span style="color:#27c93f; font-size:14px;">● nightly</span>
-    <span style="color:#8b949e; font-size:12px; margin-top:6px;">Score optimization</span>
-  </div>
-</div>
 
 ---
 
