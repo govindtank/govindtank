@@ -6,6 +6,25 @@ Mobile architect & developer. I design systems, ship packages, automate the bori
 
 ---
 
+## How I solve problems
+
+Spot the real problem → design the smallest solid solution → ship it production-ready → automate the repeat. I don't sell skills. I ship solutions.
+
+**"Phone validation across countries was broken guesswork."**
+`country_code_picker` v2 broke on Flutter master, and validation had fake length ranges with no mobile/landline distinction. Built a pure Dart validator with refreshable libphonenumber metadata, real per-country ranges, mobile-only detection, picker-friendly API. Shipped `country_mobile_validator` v0.2.0 — **pana 160/160**, zero native dependencies.
+
+**"Cloud speech-to-text was slow, private, and metered."**
+Bridged whisper.cpp into Flutter — automatic model download, streaming results, off-main-thread transcription, real cancellation, mic recording. Shipped `flutter_whisper` v0.1.0. Offline. Private. Free.
+
+**"Waveform rendering stuttered on long audio."**
+Built a GPU-accelerated waveform widget — zoom, region selection, cue markers, audio peak extraction. Shipped `waveform_pro` v1.0.0.
+
+**"Missed market breakouts because scanning was manual."**
+Built a Python scanner + options paper-trading bot (Short Put Credit Spread, ₹1L virtual) — 4 daily cron jobs, Telegram alerts, trailing stops, hourly price refresh. It runs itself now.
+
+**"Keyboards covered half the screen on small devices."**
+Built `cmp-keyboard` — a Compose Multiplatform keyboard-aware layout that handles insets on Android and iOS with one composable. Same pattern for `cmp-linked-text` and `cmp-clipboard`.
+
 ## Currently shipping
 
 - **country_mobile_validator** v0.2.0 — per-country mobile validation, pana 160/160, all tests green

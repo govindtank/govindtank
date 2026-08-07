@@ -22,6 +22,9 @@ jobs:
           outputs: |
             dist/github-snake.svg
 
+      - name: Beautify snake
+        run: python .github/beautify_snake.py dist/github-snake.svg
+
       - name: Refresh recent activity
         run: python .github/refresh_activity.py
         env:
