@@ -1,96 +1,83 @@
 <div align="center">
 
-<img src="assets/govindtank-avatar.png" width="180" alt="Govind Tank avatar" />
+<img src="assets/govindtank-avatar.png" width="172" alt="Govind Tank avatar" style="border-radius:50%;"/>
 
 # Govind Tank
 
-**Mobile architect & developer** — design systems, ship packages, automate the boring.
+**Mobile Architect · Developer · Technical Consultant**  
+Design systems • Ship packages • Automate production workflows
 
-<img src="assets/terminal-intro.svg" alt="Terminal intro animation" width="100%" />
-
+<div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">🚀 Flutter · Android</span>
+  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">🐍 Python · On-device AI</span>
+  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">📦 50+ repos</span>
+  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">📱 2 Play Store apps</span>
 </div>
 
 ---
 
-## Solutions, as code
+## Live Library Demos
 
-**CASE 01 — phone validation across 50+ countries was guesswork**
-
-```python
-# country_code_picker v2 broke on Flutter master · fake length ranges everywhere
-def validate(phone: str, country: str) -> Verdict:
-    meta  = Metadata.refresh()                      # libphonenumber data, always current
-    ok_len  = is_mobile_length(phone, meta[country])   # real ranges: 8–10, 10–11 digits
-    ok_type = not meta[country].mobile_only or is_mobile(phone)  # landlines rejected
-    return Verdict(valid=ok_len and ok_type)
-
-ship("country_mobile_validator", version="0.2.0", pana=160, native_deps=0)
-```
-
-**CASE 02 — cloud speech-to-text: slow, private, metered**
-
-```python
-# whisper.cpp bridged into Flutter — the model runs on the device, not a server
-class FlutterWhisper:
-    def transcribe(audio: WAV, model: WhisperModel) -> Stream[Partial]:
-        yield from whisper.cpp.stream(audio, model)   # off-main-thread
-        # cancel() aborts mid-flight · results arrive as they decode
-
-ship("flutter_whisper", version="0.1.0", offline=True, cost_per_user=0)
-```
-
-**CASE 03 — waveform rendering stuttered on long audio**
-
-```dart
-// GPU-accelerated — zoom, region selection, cue markers, peak extraction
-class WaveformPro extends StatelessWidget {
-  Widget build(_) => CustomPaint(
-    painter: WaveformPainter(peaks: AudioPeaks.extract(wav)),
-    // shader-based rasterization keeps 60fps on hour-long tracks
-  );
-}
-
-ship("waveform_pro", version="1.0.0", renderer="GPU shader");
-```
-
-**CASE 04 — missed market breakouts because scanning was manual**
-
-```python
-# NSE scanner + options paper-trading bot, runs itself now
-SCHEDULE = cron("09:15", "12:00", "15:30", "17:00", tz="IST")   # 4 daily jobs
-def on_signal(signal: DarvaXBreakout) -> None:
-    Telegram.send(signal.format())      # alerts land before you open the app
-    paper_portfolio.update(signal)      # Short Put Credit Spread · ₹1L virtual
-
-ship("stock-scanner", automation=100, human_attention=0)
-```
+<div style="margin-top:32px;">
+<svg src="assets/library-demo.svg" style="max-width:700px; height:auto; display:block; background:#161b22; padding:24px; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.3);"/>
+</div>
 
 ---
 
-## Currently shipping
+## Active Packages
 
-- **country_mobile_validator** v0.2.0 — per-country mobile validation, pana 160/160
-- **flutter_whisper** v0.1.0 — on-device speech-to-text, offline & private
-- **waveform_pro** v1.0.0 — GPU waveform: zoom, regions, cue markers
-- **quote_painter** v0.1.0 — styled text on image/video canvas
-- **cmp-keyboard / cmp-linked-text / cmp-clipboard** — Compose Multiplatform libraries
-- **stock-scanner** — NSE scanner + paper trading bot, 4 daily crons, Telegram alerts
-
-## Recent activity
-
-<!-- ACTIVITY:START -->
-- nothing yet — check back soon
-<!-- ACTIVITY:END -->
-
-## Elsewhere
-
-- Repositories — [github.com/govindtank](https://github.com/govindtank?tab=repositories)
-- Portfolio — [govindtank.github.io](https://govindtank.github.io)
-- LinkedIn — [linkedin.com/in/govindtank](https://www.linkedin.com/in/govindtank/)
-- Email — [govindtank600@gmail.com](mailto:govindtank600@gmail.com)
+<div style="background:#0d1117; border:1px solid #30363d; border-radius:12px; padding:20px;">
+  <strong style="color:#58a6ff; display:block; margin-bottom:8px;">Production Libraries</strong>
+  <table style="width:100%; text-align:left;">
+    <tr>
+      <td style="color:#c9d1d9; font-weight:600;">country_mobile_validator</td>
+      <td style="color:#8b949e; font-size:13px;">v0.2.0 · pana 160/160</td>
+    </tr>
+    <tr><td colspan="2" style="border-top:1px solid #21262d;"></td></tr>
+    <tr>
+      <td style="color:#c9d1d9; font-weight:600;">flutter_whisper</td>
+      <td style="color:#8b949e; font-size:13px;">v0.1.0 · whisper.cpp bridge</td>
+    </tr>
+    <tr><td colspan="2" style="border-top:1px solid #21262d;"></td></tr>
+    <tr>
+      <td style="color:#c9d1d9; font-weight:600;">waveform_pro</td>
+      <td style="color:#8b949e; font-size:13px;">v1.0.0 · GPU shader rasterizer</td>
+    </tr>
+    <tr><td colspan="2" style="border-top:1px solid #21262d;"></td></tr>
+    <tr>
+      <td style="color:#c9d1d9; font-weight:600;">quote_painter</td>
+      <td style="color:#8b949e; font-size:13px;">v0.1.0 · text-on-canvas engine</td>
+    </tr>
+  </table>
+</div>
 
 ---
 
-<img src="https://raw.githubusercontent.com/govindtank/govindtank/master/dist/github-snake.svg" alt="Snake eating contributions" width="100%" />
+## Automation Status
 
-_Last updated: 2026-08-07 13:15 UTC_
+<div style="display:flex; gap:20px; justify-content:center; margin-top:24px;">
+  <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
+    <strong style="display:block; margin-bottom:8px;">📊 stock-scanner</strong>
+    <span style="color:#27c93f; font-size:14px;">● 4× daily IST</span>
+    <span style="color:#8b949e; font-size:12px; margin-top:6px;">Telegram delivery</span>
+  </div>
+  <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
+    <strong style="display:block; margin-bottom:8px;">🔁 readme-refresh</strong>
+    <span style="color:#27c93f; font-size:14px;">● 4× daily</span>
+    <span style="color:#8b949e; font-size:12px; margin-top:6px;">Activity feed</span>
+  </div>
+  <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
+    <strong style="display:block; margin-bottom:8px;">🔬 pub.dev checker</strong>
+    <span style="color:#27c93f; font-size:14px;">● nightly</span>
+    <span style="color:#8b949e; font-size:12px; margin-top:6px;">Score optimization</span>
+  </div>
+</div>
+
+---
+
+<div style="margin-top:32px;">
+<a href="https://github.com/govindtank" style="display:inline-block; background:#238636; color:#ffffff; padding:10px 24px; border-radius:6px; text-decoration:none; font-weight:600; margin:8px;">View Repositories</a>  
+<a href="https://pub.dev/publishers/pub.dartlang.org/author/govindtank" style="display:inline-block; background:#3b82f6; color:#ffffff; padding:10px 24px; border-radius:6px; text-decoration:none; font-weight:600; margin:8px;">Packages</a>
+</div>
+
+</div>

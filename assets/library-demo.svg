@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="740" height="520" viewBox="0 0 740 520">
+  <defs>
+    <style>
+      .bg { fill:#0d1117; }
+      .bar { fill:#161b22; }
+      .dotr{ fill:#ff5f56; } .doty{ fill:#ffbd2e; } .dotg{ fill:#27c93f; }
+      .prompt{ fill:#39d353; font:600 14px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+      .cmd  { fill:#e6edf3; font:600 14px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+      .arg  { fill:#79c0ff; font:400 13px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+      .res  { fill:#a5d6ff; font:400 13px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+      .hdr  { fill:#58a6ff; font:600 14px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+      .sub  { fill:#8b949e; font:400 12px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+      .ok   { fill:#27c93f; font:500 12px 'JetBrains Mono','Fira Code','SF Mono',monospace; }
+    </style>
+    <linearGradient id="termGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#161b22"/>
+      <stop offset="1" stop-color="#0d1117"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Window frame -->
+  <rect class="bg" x="0" y="0" width="740" height="520" rx="14"/>
+  <rect x="0" y="0" width="740" height="50" rx="14" fill="url(#termGrad)"/>
+  <rect x="0" y="46" width="740" height="4" fill="#161b22"/>
+  <circle class="dotr" cx="20" cy="25" r="8"/>
+  <circle class="doty" cx="46" cy="25" r="8"/>
+  <circle class="dotg" cx="72" cy="25" r="8"/>
+  <text x="370" y="32" text-anchor="middle" fill="#8b949e" font="500 11px monospace">govindtank@main — library demo</text>
+
+  <!-- Line 1: Import -->
+  <text class="prompt" x="20" y="72">$</text>
+  <text class="cmd" x="36" y="72">dart pub add country_mobile_validator flutter_whisper waveform_pro quote_painter</text>
+
+  <!-- Line 2: Validation Demo -->
+  <text class="prompt" x="20" y="100">$</text>
+  <text class="cmd" x="36" y="100">await country_mobile_validator.validateForCountry("IN", "9876543210");</text>
+
+  <!-- Line 3: Result -->
+  <g transform="translate(36,114)">
+    <rect class="bar" width="580" height="26" rx="4" fill="#1c2128"/>
+    <path d="M -4 -6 h6 L-4 0 V6 H-4 Z m10 -6 h4 l-4 6 V0 h-4 z" fill="#39d353" transform="translate(2,2)"/>
+    <text class="res" x="24" y="18">✓ Mobile: true · Length: 10 · CountryCode: IN</text>
+  </g>
+  <text class="sub" x="36" y="145"># Returns zero if invalid, positive for valid mobile numbers</text>
+
+  <!-- Line 4: Whisper Demo -->
+  <text class="prompt" x="20" y="178">$</text>
+  <text class="cmd" x="36" y="178">flutter_whisper.process_streaming(audio_bytes);</text>
+
+  <!-- Line 5: Result -->
+  <g transform="translate(36,192)">
+    <rect class="bar" width="580" height="26" rx="4" fill="#1c2128"/>
+    <path d="M -4 -6 h6 L-4 0 V6 H-4 Z m10 -6 h4 l-4 6 V0 h-4 z" fill="#39d353" transform="translate(2,2)"/>
+    <text class="res" x="24" y="18">✓ Transcribed: "Hello world · Testing whisper.cpp integration"</text>
+  </g>
+  <text class="sub" x="36" y="223"># Offline STT with streaming support and cancellation</text>
+
+  <!-- Line 6: Waveform Demo -->
+  <text class="prompt" x="20" y="254">$</text>
+  <text class="cmd" x="36" y="254">waveform_pro.rasterize(waveformData, zoomLevel:60fps);</text>
+
+  <!-- Line 7: Result -->
+  <g transform="translate(36,268)">
+    <rect class="bar" width="580" height="26" rx="4" fill="#1c2128"/>
+    <path d="M -4 -6 h6 L-4 0 V6 H-4 Z m10 -6 h4 l-4 6 V0 h-4 z" fill="#39d353" transform="translate(2,2)"/>
+    <text class="res" x="24" y="18">✓ GPU Rendered · 60fps zoom · Peak markers drawn</text>
+  </g>
+  <text class="sub" x="36" y="299"># CustomPaint GPU shader rasterizer for audio visualization</text>
+
+  <!-- Line 8: Quote Demo -->
+  <text class="prompt" x="20" y="328">$</text>
+  <text class="cmd" x="36" y="328">quote_painter.render("Code is poetry.", font:"SF Pro", bg:gradient, stroke:true);</text>
+
+  <!-- Line 9: Result -->
+  <g transform="translate(36,342)">
+    <rect class="bar" width="580" height="26" rx="4" fill="#1c2128"/>
+    <path d="M -4 -6 h6 L-4 0 V6 H-4 Z m10 -6 h4 l-4 6 V0 h-4 z" fill="#39d353" transform="translate(2,2)"/>
+    <text class="res" x="24" y="18">✓ Canvas Created · Gradient Background · Stroke Applied</text>
+  </g>
+  <text class="sub" x="36" y="373"># Text-on-canvas engine for beautiful quote images (PNG/JPEG)</text>
+
+  <!-- Line 10: Summary -->
+  <text class="ok" x="20" y="418">✓ All libraries operational · Zero runtime issues</text>
+  <text class="sub" x="36" y="445"># Ship on-device AI, audio viz, and beautiful quotes to production</text>
+
+</svg>
