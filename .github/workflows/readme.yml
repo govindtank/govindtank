@@ -18,7 +18,9 @@ jobs:
         uses: Platane/snk@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          svg_out_path: dist/github-snake.svg
+          github_user_name: govindtank
+          outputs: |
+            dist/github-snake.svg
 
       - name: Refresh recent activity
         run: python .github/refresh_activity.py
