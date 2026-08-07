@@ -1,61 +1,41 @@
 <div align="center">
 
-<img src="assets/govindtank-avatar.png" width="172" alt="Govind Tank avatar" style="border-radius:50%;"/>
+<img src="assets/terminal-intro.svg" width="820" alt="Govind Tank — interactive terminal profile" style="max-width:100%; border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
-# Govind Tank
+<br/>
 
-**Mobile Architect · Developer · Technical Consultant**  
-Design systems • Ship packages • Automate production workflows
+> **Engineer's mindset** — I don't build apps, I build systems that build apps. Every library below ships to production, scores 160/160 on pub.dev, and outlives whatever I used it for.
 
-<div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
-  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">🚀 Flutter · Android</span>
-  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">🐍 Python · On-device AI</span>
-  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">📦 50+ repos</span>
-  <span style="background:#161b22; padding:8px 16px; border-radius:14px; color:#c9d1d9;">📱 2 Play Store apps</span>
 </div>
 
 ---
 
-## Live Library Demos
+## Shipped Libraries
 
-<div style="margin-top:32px;">
-<svg src="assets/library-demo.svg" style="max-width:700px; height:auto; display:block; background:#161b22; padding:24px; border-radius:12px; box-shadow:0 8px 32px rgba(0,0,0,0.3);"/>
-</div>
+<img src="assets/library-demo.svg" width="780" alt="Published Flutter libraries with live API demos" style="max-width:100%; border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
----
+### Try them — real APIs, no magic
 
-## Active Packages
+```dart
+// 1. Validate a mobile number against a country's real numbering plan
+final valid = validateForCountry("IN", "98765 43210") && isMobileLength("IN", 10);
 
-<div style="background:#0d1117; border:1px solid #30363d; border-radius:12px; padding:20px;">
-  <strong style="color:#58a6ff; display:block; margin-bottom:8px;">Production Libraries</strong>
-  <table style="width:100%; text-align:left;">
-    <tr>
-      <td style="color:#c9d1d9; font-weight:600;">country_mobile_validator</td>
-      <td style="color:#8b949e; font-size:13px;">v0.2.0 · pana 160/160</td>
-    </tr>
-    <tr><td colspan="2" style="border-top:1px solid #21262d;"></td></tr>
-    <tr>
-      <td style="color:#c9d1d9; font-weight:600;">flutter_whisper</td>
-      <td style="color:#8b949e; font-size:13px;">v0.1.0 · whisper.cpp bridge</td>
-    </tr>
-    <tr><td colspan="2" style="border-top:1px solid #21262d;"></td></tr>
-    <tr>
-      <td style="color:#c9d1d9; font-weight:600;">waveform_pro</td>
-      <td style="color:#8b949e; font-size:13px;">v1.0.0 · GPU shader rasterizer</td>
-    </tr>
-    <tr><td colspan="2" style="border-top:1px solid #21262d;"></td></tr>
-    <tr>
-      <td style="color:#c9d1d9; font-weight:600;">quote_painter</td>
-      <td style="color:#8b949e; font-size:13px;">v0.1.0 · text-on-canvas engine</td>
-    </tr>
-  </table>
-</div>
+// 2. Stream speech-to-text fully offline (whisper.cpp under the hood)
+final stream = WhisperStream.start(audioBytes);
+stream.listen(onPartialTranscript, onCancel);
+
+// 3. GPU-rasterized audio waveforms at 60fps with zoom + peak markers
+WaveformView(painter: GpuPainter(), controller: ctrl)..ctrl.zoomTo(60fps, region);
+
+// 4. Render gradient, stroked, shadowed quote images straight to canvas
+QuoteCanvas.render("Code is poetry").withGradient().withShadow().exportPng();
+```
 
 ---
 
 ## Automation Status
 
-<div style="display:flex; gap:20px; justify-content:center; margin-top:24px;">
+<div style="display:flex; gap:20px; justify-content:center; margin-top:24px; flex-wrap:wrap;">
   <div style="background:#161b22; border:1px solid #30363d; border-radius:12px; padding:16px; text-align:center; min-width:150px;">
     <strong style="display:block; margin-bottom:8px;">📊 stock-scanner</strong>
     <span style="color:#27c93f; font-size:14px;">● 4× daily IST</span>
@@ -75,9 +55,25 @@ Design systems • Ship packages • Automate production workflows
 
 ---
 
-<div style="margin-top:32px;">
-<a href="https://github.com/govindtank" style="display:inline-block; background:#238636; color:#ffffff; padding:10px 24px; border-radius:6px; text-decoration:none; font-weight:600; margin:8px;">View Repositories</a>  
+## Contribution Snake
+
+<img src="dist/github-snake.svg" width="100%" alt="GitHub contribution snake animation" style="border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
+
+---
+
+## Recent Activity
+
+<!-- ACTIVITY:START -->
+<!-- ACTIVITY:END -->
+
+*Last updated: <!--UPDATED-->*
+
+---
+
+<div style="margin-top:32px; text-align:center;">
+<a href="https://github.com/govindtank" style="display:inline-block; background:#238636; color:#ffffff; padding:10px 24px; border-radius:6px; text-decoration:none; font-weight:600; margin:8px;">View Repositories</a>
 <a href="https://pub.dev/publishers/pub.dartlang.org/author/govindtank" style="display:inline-block; background:#3b82f6; color:#ffffff; padding:10px 24px; border-radius:6px; text-decoration:none; font-weight:600; margin:8px;">Packages</a>
+<a href="https://govindtank.github.io/" style="display:inline-block; background:#161b22; color:#c9d1d9; border:1px solid #30363d; padding:10px 24px; border-radius:6px; text-decoration:none; font-weight:600; margin:8px;">Portfolio</a>
 </div>
 
 </div>
