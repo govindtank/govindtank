@@ -1,43 +1,84 @@
+<div align="center">
+
+<img src="assets/govindtank-avatar.png" width="180" alt="Govind Tank avatar" />
+
 # Govind Tank
 
-Mobile architect & developer. I design systems, ship packages, automate the boring.
+**Mobile architect & developer** — design systems, ship packages, automate the boring.
 
-<img src="https://readme-typing-svg.demolab.com?font=Poppins&weight=400&size=22&duration=2600&pause=900&color=22C55E&center=true&vCenter=true&width=520&height=50&lines=Mobile+Architect;Flutter+%26+Android+Developer;pub.dev+package+publisher;On-device+AI+explorer;Automation+enthusiast" alt="Typing: roles" />
+<img src="assets/terminal-intro.svg" alt="Terminal intro animation" width="100%" />
+
+</div>
 
 ---
 
-## How I solve problems
+## Solutions, as code
 
-Spot the real problem → design the smallest solid solution → ship it production-ready → automate the repeat. I don't sell skills. I ship solutions.
+**CASE 01 — phone validation across 50+ countries was guesswork**
 
-**"Phone validation across countries was broken guesswork."**
-`country_code_picker` v2 broke on Flutter master, and validation had fake length ranges with no mobile/landline distinction. Built a pure Dart validator with refreshable libphonenumber metadata, real per-country ranges, mobile-only detection, picker-friendly API. Shipped `country_mobile_validator` v0.2.0 — **pana 160/160**, zero native dependencies.
+```python
+# country_code_picker v2 broke on Flutter master · fake length ranges everywhere
+def validate(phone: str, country: str) -> Verdict:
+    meta  = Metadata.refresh()                      # libphonenumber data, always current
+    ok_len  = is_mobile_length(phone, meta[country])   # real ranges: 8–10, 10–11 digits
+    ok_type = not meta[country].mobile_only or is_mobile(phone)  # landlines rejected
+    return Verdict(valid=ok_len and ok_type)
 
-**"Cloud speech-to-text was slow, private, and metered."**
-Bridged whisper.cpp into Flutter — automatic model download, streaming results, off-main-thread transcription, real cancellation, mic recording. Shipped `flutter_whisper` v0.1.0. Offline. Private. Free.
+ship("country_mobile_validator", version="0.2.0", pana=160, native_deps=0)
+```
 
-**"Waveform rendering stuttered on long audio."**
-Built a GPU-accelerated waveform widget — zoom, region selection, cue markers, audio peak extraction. Shipped `waveform_pro` v1.0.0.
+**CASE 02 — cloud speech-to-text: slow, private, metered**
 
-**"Missed market breakouts because scanning was manual."**
-Built a Python scanner + options paper-trading bot (Short Put Credit Spread, ₹1L virtual) — 4 daily cron jobs, Telegram alerts, trailing stops, hourly price refresh. It runs itself now.
+```python
+# whisper.cpp bridged into Flutter — the model runs on the device, not a server
+class FlutterWhisper:
+    def transcribe(audio: WAV, model: WhisperModel) -> Stream[Partial]:
+        yield from whisper.cpp.stream(audio, model)   # off-main-thread
+        # cancel() aborts mid-flight · results arrive as they decode
 
-**"Keyboards covered half the screen on small devices."**
-Built `cmp-keyboard` — a Compose Multiplatform keyboard-aware layout that handles insets on Android and iOS with one composable. Same pattern for `cmp-linked-text` and `cmp-clipboard`.
+ship("flutter_whisper", version="0.1.0", offline=True, cost_per_user=0)
+```
+
+**CASE 03 — waveform rendering stuttered on long audio**
+
+```dart
+// GPU-accelerated — zoom, region selection, cue markers, peak extraction
+class WaveformPro extends StatelessWidget {
+  Widget build(_) => CustomPaint(
+    painter: WaveformPainter(peaks: AudioPeaks.extract(wav)),
+    // shader-based rasterization keeps 60fps on hour-long tracks
+  );
+}
+
+ship("waveform_pro", version="1.0.0", renderer="GPU shader");
+```
+
+**CASE 04 — missed market breakouts because scanning was manual**
+
+```python
+# NSE scanner + options paper-trading bot, runs itself now
+SCHEDULE = cron("09:15", "12:00", "15:30", "17:00", tz="IST")   # 4 daily jobs
+def on_signal(signal: DarvaXBreakout) -> None:
+    Telegram.send(signal.format())      # alerts land before you open the app
+    paper_portfolio.update(signal)      # Short Put Credit Spread · ₹1L virtual
+
+ship("stock-scanner", automation=100, human_attention=0)
+```
+
+---
 
 ## Currently shipping
 
-- **country_mobile_validator** v0.2.0 — per-country mobile validation, pana 160/160, all tests green
-- **flutter_whisper** v0.1.0 — on-device speech-to-text via whisper.cpp, offline & private
-- **waveform_pro** v1.0.0 — GPU-accelerated waveform widget: zoom, regions, cue markers
-- **quote_painter** v0.1.0 — styled text on image/video canvas, gradient & stroke
-- **stock-scanner** — real-time NSE scanner + paper trading bot, 4 daily cron jobs, Telegram alerts
+- **country_mobile_validator** v0.2.0 — per-country mobile validation, pana 160/160
+- **flutter_whisper** v0.1.0 — on-device speech-to-text, offline & private
+- **waveform_pro** v1.0.0 — GPU waveform: zoom, regions, cue markers
+- **quote_painter** v0.1.0 — styled text on image/video canvas
 - **cmp-keyboard / cmp-linked-text / cmp-clipboard** — Compose Multiplatform libraries
+- **stock-scanner** — NSE scanner + paper trading bot, 4 daily crons, Telegram alerts
 
 ## Recent activity
 
 <!-- ACTIVITY:START -->
-- nothing yet — check back soon
 <!-- ACTIVITY:END -->
 
 ## Elsewhere
@@ -51,4 +92,4 @@ Built `cmp-keyboard` — a Compose Multiplatform keyboard-aware layout that hand
 
 <img src="https://raw.githubusercontent.com/govindtank/govindtank/master/dist/github-snake.svg" alt="Snake eating contributions" width="100%" />
 
-_Last updated: 2026-08-07 07:05 UTC_
+_Last updated: <!--UPDATED-->_

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="680" height="272" viewBox="0 0 680 272">
+  <defs>
+    <style>
+      .bar { fill:#161b22; }
+      .bg  { fill:#0d1117; }
+      .dotr{ fill:#ff5f56; } .doty{ fill:#ffbd2e; } .dotg{ fill:#27c93f; }
+      .title{ fill:#8b949e; font:600 12px 'SF Mono',Menlo,monospace; }
+      .prompt{ fill:#39d353; font:600 13px 'SF Mono',Menlo,monospace; }
+      .cmd  { fill:#e6edf3; font:400 13px 'SF Mono',Menlo,monospace; }
+      .out  { fill:#8b949e; font:400 13px 'SF Mono',Menlo,monospace; }
+      .ok   { fill:#22d3ee; font:400 13px 'SF Mono',Menlo,monospace; }
+      .cur  { fill:#39d353; }
+    </style>
+    <clipPath id="l0"><rect width="0" height="20"><animate attributeName="width" from="0" to="70" dur="0.9s" begin="0.4s; 19.4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l1"><rect width="0" height="20"><animate attributeName="width" from="0" to="590" dur="2.2s" begin="1.6s; 20.6s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l2"><rect width="0" height="20"><animate attributeName="width" from="0" to="160" dur="0.9s" begin="4.4s; 23.4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l3"><rect width="0" height="20"><animate attributeName="width" from="0" to="420" dur="1.8s" begin="5.6s; 24.6s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l4"><rect width="0" height="20"><animate attributeName="width" from="0" to="120" dur="0.9s" begin="8.2s; 27.2s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l5"><rect width="0" height="20"><animate attributeName="width" from="0" to="460" dur="1.8s" begin="9.4s; 28.4s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l6"><rect width="0" height="20"><animate attributeName="width" from="0" to="560" dur="2.0s" begin="11.8s; 30.8s" repeatCount="indefinite"/></rect></clipPath>
+    <clipPath id="l7"><rect width="0" height="20"><animate attributeName="width" from="0" to="40" dur="0.6s" begin="14.4s; 33.4s" repeatCount="indefinite"/></rect></clipPath>
+  </defs>
+
+  <rect class="bg" x="0" y="0" width="680" height="272" rx="14"/>
+  <rect class="bar" x="0" y="0" width="680" height="40" rx="14"/>
+  <rect class="bar" x="0" y="26" width="680" height="14"/>
+  <circle class="dotr" cx="24" cy="20" r="6"/>
+  <circle class="doty" cx="46" cy="20" r="6"/>
+  <circle class="dotg" cx="68" cy="20" r="6"/>
+  <text class="title" x="300" y="25">govindtank — zsh — 80×24</text>
+
+  <text class="prompt" x="18" y="68" clip-path="url(#l0)">$ whoami</text>
+  <text class="out" x="18" y="92" clip-path="url(#l1)">govindtank · mobile architect · flutter / android / kotlin-multiplatform</text>
+  <text class="prompt" x="18" y="120" clip-path="url(#l2)">$ cat philosophy.txt</text>
+  <text class="out" x="18" y="144" clip-path="url(#l3)">"proof over claims · architecture over framework · automate the boring"</text>
+  <text class="prompt" x="18" y="172" clip-path="url(#l4)">$ ./ship --check</text>
+  <text class="ok" x="18" y="196" clip-path="url(#l5)">✓ country_mobile_validator v0.2.0 · pana 160/160 · zero native deps</text>
+  <text class="ok" x="18" y="220" clip-path="url(#l6)">✓ waveform_pro v1.0.0 · flutter_whisper v0.1.0 · quote_painter v0.1.0</text>
+  <text class="prompt" x="18" y="248" clip-path="url(#l7)">$ </text>
+  <rect class="cur" x="38" y="238" width="8" height="16" rx="1">
+    <animate attributeName="opacity" values="1;0;1" dur="1.1s" begin="14.8s" repeatCount="indefinite"/>
+  </rect>
+</svg>
