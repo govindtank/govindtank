@@ -30,11 +30,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-10` **govindtank** — feat: activity feed via commit-search API (real messages)
-- `2026-08-10` **govindtank** — feat: data-driven profile assets — live pub.dev versions, GitHub stats
-- `2026-08-10` **govindtank.github.io** — blog: IntelliJ IDEA Goes LSP: Kotlin and Java Intelligence in VS Code 
-- `2026-08-09` **govindtank.github.io** — blog: Claude Code Auto Mode Is Now the Default: Should You Trust It? (
-- `2026-08-08` **govindtank.github.io** — blog: DeepSeek V4 Flash: What the New Open Model Means for Developers 
+- `2026-08-10` **govindtank** — feat: cleaner Arsenal cards + terminal intro includes Kotlin libs
+- `2026-08-10` **govindtank** — feat: cleaner Arsenal SVG layout, drop GIF, keep snake untouched
+- `2026-08-10` **govindtank** — chore: regenerate Arsenal GIF in CI
+- `2026-08-10` **govindtank** — feat: animated Arsenal GIF with scanlines + card reveal
+- `2026-08-10` **govindtank** — feat: expand Arsenal to 8 libraries with animated card grid
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
