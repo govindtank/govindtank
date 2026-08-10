@@ -33,7 +33,6 @@ jobs:
       - name: Regenerate animated assets (live data)
         run: |
           python .github/gen_arsenal.py --live
-          python .github/gen_arsenal_gif.py
           python .github/gen_terminal.py --live
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
