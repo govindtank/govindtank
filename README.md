@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/terminal-intro.svg" width="820" alt="Govind Tank — interactive terminal profile" style="max-width:100%; border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
+<img src="assets/terminal-intro.svg" width="820" alt="Govind Tank — interactive CLI profile" style="max-width:100%; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
 <br/>
 
@@ -12,30 +12,17 @@
 
 ## The Arsenal — Published Packages
 
-<img src="assets/library-demo.svg" width="780" alt="Published Flutter libraries with live API demos" style="max-width:100%; border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
+<img src="assets/library-demo.svg" width="780" alt="Govind Tank's published Flutter libraries" style="max-width:100%; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
-### Try them — real APIs, no magic
+*Versions above refresh automatically from pub.dev — check [all packages](https://pub.dev/publishers/pub.dartlang.org/author/govindtank).*
 
-```dart
-// 1. Validate a mobile number against a country's real numbering plan
-final valid = validateForCountry("IN", "98765 43210") && isMobileLength("IN", 10);
-
-// 2. Stream speech-to-text fully offline (whisper.cpp under the hood)
-final stream = WhisperStream.start(audioBytes);
-stream.listen(onPartialTranscript, onCancel);
-
-// 3. GPU-rasterized audio waveforms at 60fps with zoom + peak markers
-WaveformView(painter: GpuPainter(), controller: ctrl)..ctrl.zoomTo(60fps, region);
-
-// 4. Render gradient, stroked, shadowed quote images straight to canvas
-QuoteCanvas.render("Code is poetry").withGradient().withShadow().exportPng();
-```
+> 🎮 Try the **interactive version** — live typing terminal with replay, clickable library cards: [govindtank.github.io/viewer](https://govindtank.github.io/viewer/)
 
 ---
 
-## Contribution Snake
+## Contribution Graph
 
-<img src="dist/github-snake.svg" width="100%" alt="GitHub contribution snake animation" style="border-radius:14px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
+<img src="dist/github-snake.svg" width="100%" alt="GitHub contribution snake animation" style="border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
 ---
 

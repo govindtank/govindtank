@@ -1,0 +1,82 @@
+{
+  "packages": [
+    {
+      "name": "country_mobile_validator",
+      "version": "0.2.0",
+      "score": "160/160",
+      "color": "#22d3ee",
+      "color2": "#0ea5e9",
+      "icon": "&#9745;",
+      "iconColor": "#22d3ee",
+      "code": [
+        "validateForCountry(\"IN\",\"98765 43210\")",
+        "isMobileLength(\"IN\", 10)   // true"
+      ],
+      "tag": "zero native deps · libphonenumber metadata · mobile-only",
+      "url": "https://pub.dev/packages/country_mobile_validator",
+      "desc": "Country-aware mobile number validation on real libphonenumber data. Pure Dart, no native code."
+    },
+    {
+      "name": "flutter_whisper",
+      "version": "0.1.0",
+      "score": "160/160",
+      "color": "#7ee787",
+      "color2": "#39d353",
+      "icon": "&#9835;",
+      "iconColor": "#7ee787",
+      "code": [
+        "WhisperStream.start(audioBytes)",
+        "stream.listen(onPartial, onCancel)"
+      ],
+      "tag": "whisper.cpp bridge · offline STT · streaming + cancel",
+      "url": "https://pub.dev/packages/flutter_whisper",
+      "desc": "Streaming speech-to-text on-device via whisper.cpp. Zero cloud cost, works offline, cancelable."
+    },
+    {
+      "name": "waveform_pro",
+      "version": "1.0.2",
+      "score": "160/160",
+      "color": "#f778ba",
+      "color2": "#fb7185",
+      "icon": "&#8764;",
+      "iconColor": "#f778ba",
+      "code": [
+        "WaveformView(painter: GpuPainter())",
+        "controller.zoomTo(60fps, region)"
+      ],
+      "tag": "GPU shader rasterizer · 60fps zoom · peak markers",
+      "url": "https://pub.dev/packages/waveform_pro",
+      "desc": "Audio waveform rendering that holds 60fps on huge files — GPU rasterization via fragment shader."
+    },
+    {
+      "name": "quote_painter",
+      "version": "0.1.0",
+      "score": "160/160",
+      "color": "#d2a8ff",
+      "color2": "#a78bfa",
+      "icon": "&#8220;",
+      "iconColor": "#d2a8ff",
+      "code": [
+        "QuoteCanvas.render(\"Code is poetry\")",
+        "..withGradient()..withShadow()"
+      ],
+      "tag": "text-on-canvas engine · gradient · stroke · PNG export",
+      "url": "https://pub.dev/packages/quote_painter",
+      "desc": "Render quote images straight from Dart: gradient, stroke, shadow, per-line alignment, PNG export."
+    }
+  ],
+  "header": {
+    "title": "THE ARSENAL",
+    "sub": "4 published packages · combined pana 640/640 · zero native deps · all in production"
+  },
+  "profile": {
+    "name": "GOVIND TANK",
+    "role": "Mobile Architect · Developer · Technical Consultant",
+    "stack": "flutter · android · kotlin · python · on-device AI · automations",
+    "motto": "\"automate the boring, ship the real, measure everything\"",
+    "apps": 2,
+    "dashboards": 3,
+    "installer": "curl -fsSL govindtank.dev/install | sh",
+    "version": "v2.1.0"
+  }
+}
