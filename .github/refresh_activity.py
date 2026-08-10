@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Refresh README 'Recent activity' + 'Last updated' markers. Run by GitHub Action."""
+"""Refresh README 'Recent activity' + 'Last updated' markers. Run by GitHub Action.
+
+Source: GitHub commit-search API (author:govindtank) — returns real commit
+messages across all repos, which the events API omits.
+"""
 import json
 import os
 import re
@@ -7,45 +11,40 @@ import urllib.request
 from datetime import datetime, timezone
 
 TOKEN = os.environ["GITHUB_TOKEN"]
-API = "https://api.github.com/users/govindtank/events/public"
-ME = "govindtank/govindtank"
-SKIP_MSGS = ("chore: refresh", "chore(readme)")
+SEARCH = ("https://api.github.com/search/commits"
+          "?q=author:govindtank&sort=committer-date&order=desc&per_page=8")
+SKIP_MSGS = ("chore: refresh", "chore(readme)", "Merge branch")
 
 
 def fetch():
-    req = urllib.request.Request(API, headers={"Authorization": f"Bearer {TOKEN}"})
+    req = urllib.request.Request(
+        SEARCH,
+        headers={
+            "Authorization": f"Bearer {TOKEN}",
+            "Accept": "application/vnd.github.cloak-preview+json",
+            "User-Agent": "govindtank-readme/1.0",
+        },
+    )
     with urllib.request.urlopen(req, timeout=30) as r:
         return json.load(r)
 
 
-def fmt(ev):
-    repo = ev["repo"]["name"]
-    if repo == ME:
+def fmt(item):
+    repo = item["repository"]["full_name"]
+    msg = item["commit"]["message"].split("\n")[0].strip()
+    if not msg or any(msg.startswith(s) for s in SKIP_MSGS):
         return None
-    t = ev["type"]
-    if t == "PushEvent":
-        msgs = [c.get("message", "") for c in ev.get("payload", {}).get("commits", [])]
-        msgs = [m for m in msgs if m]
-        if not msgs:
-            return None
-        msg = msgs[-1].split("\n")[0]
-        if any(msg.startswith(s) for s in SKIP_MSGS):
-            return None
-        return f"- pushed to `{repo}` — {msg}"
-    if t == "ReleaseEvent":
-        rel = ev.get("payload", {}).get("release", {})
-        tag = rel.get("tag_name", "release")
-        return f"- released `{tag}` in `{repo}`"
-    if t == "CreateEvent" and ev.get("payload", {}).get("ref_type") == "repository":
-        return f"- created new repo `{repo}`"
-    return None
+    date = item["commit"]["committer"]["date"][:10]
+    short_repo = repo.replace("govindtank/", "")
+    return f"- `{date}` **{short_repo}** — {msg[:70]}"
 
 
 def main():
+    data = fetch()
     seen = set()
     lines = []
-    for ev in fetch():
-        f = fmt(ev)
+    for item in data.get("items", []):
+        f = fmt(item)
         if f and f not in seen:
             seen.add(f)
             lines.append(f)
