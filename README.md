@@ -12,7 +12,7 @@
 
 ## The Arsenal — Published Packages
 
-<img src="assets/library-demo.svg" width="900" alt="Govind Tank's published libraries" style="max-width:100%; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
+<img src="assets/library-demo.gif" width="540" alt="Govind Tank's published libraries — animated" style="max-width:100%; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
 
 > **8 libraries published** — 4 pub.dev packages + 4 JitPack libraries · Flutter + Kotlin Multiplatform · Android + iOS.  
 > Explore all: [pub.dev → govindtank](https://pub.dev/publishers/pub.dartlang.org/author/govindtank) · [JitPack → govindtank](https://jitpack.io/#govindtank)
