@@ -7,6 +7,7 @@ Font: .github/fonts/SpaceGrotesk.ttf embedded as data URI.
 """
 import base64
 import json
+import os
 import sys
 import urllib.request
 from pathlib import Path
@@ -16,7 +17,7 @@ FONT = ROOT / ".github" / "fonts" / "SpaceGrotesk.ttf"
 PKG_JSON = ROOT / ".github" / "packages.json"
 OUT = ROOT / "assets" / "terminal-intro.svg"
 
-W, H = 820, 580
+W, H = 820, 640
 MONO = "'JetBrains Mono','Fira Code','SF Mono',Menlo,monospace"
 SG = "'Space Grotesk',system-ui,sans-serif"
 FONT_B64 = base64.b64encode(FONT.read_bytes()).decode()
@@ -51,7 +52,7 @@ def fade_parts(x, y, begin, parts):
 
 def fetch_stats():
     import os
-    stats = {"repos": None, "followers": None, "stars": None}  # type: dict[str, int | None]
+    stats = {"repos": None, "followers": None, "stars": None}
     hdrs = {"User-Agent": "govindtank-readme/1.0"}
     tok = os.environ.get("GITHUB_TOKEN", "")
     if tok:
@@ -109,7 +110,7 @@ def main():
     ap(type_line(28, 82, prof["installer"], 0.4, 1.3, "c1"))
 
     # installing banner
-    ap(fade(28, 112, "dim", "&#9656; installing govindtank-profile {v} — {n} libraries, {r} repos, {f} followers".format(
+    ap(fade(28, 112, "dim", "▸ installing govindtank-profile {v} — {n} libraries, {r} repos, {f} followers".format(
         v=prof["version"], n=n_pkgs, r=repos, f=followers), 2.0))
     # progress bar
     ap(f'<rect x="28" y="122" width="460" height="10" rx="5" fill="#21262d" opacity="0">'
@@ -118,41 +119,44 @@ def main():
        f'<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="2.2s" fill="freeze"/>'
        f'{anim("width", "0;460", 1.6, 2.3)}</rect>')
     ap(fade(500, 128, "cy", "100%", 2.3))
-    ap(fade(28, 122, "ok", "&#10003; dependencies resolved", 4.1))
+    ap(fade(28, 122, "ok", "✔ dependencies resolved", 4.1))
 
     # extract lines
-    ap(fade(28, 152, "ok", "&#10003; extracting skills — flutter · android · kotlin", 4.4))
-    ap(fade(28, 176, "ok", "&#10003; linking — python · on-device AI · data dashboards", 4.7))
-    ap(fade(28, 200, "ok", "&#10003; building — {r} repos · {n} pub.dev packages · {a} Play Store apps · {s} stars".format(
-        r=repos, n=n_pkgs, a=prof["apps"], s=stars), 5.0))
+    ap(fade(28, 152, "ok", "✔ extracting skills — flutter · android · kotlin", 4.4))
+    ap(fade(28, 176, "ok", "✔ linking — python · on-device AI · data dashboards", 4.7))
+    ap(fade(28, 200, "ok", "✔ building — {r} repos · {n} pub.dev packages · {a} Play Store apps · {s} stars".format(
+        r=repos, n=sum(1 for p in pkgs if p["url"].startswith("https://pub.dev/")), a=prof["apps"], s=stars), 5.0))
+    ap(fade(28, 224, "ok", "✔ building — {n} JitPack libs · Kotlin Multiplatform · Compose".format(
+        n=sum(1 for p in pkgs if not p["url"].startswith("https://pub.dev/"))), 5.2))
 
     # 2. profile command
-    ap(type_line(28, 240, "govindtank --profile", 5.6, 0.8, "c2"))
-    ap(f'<text class="hdrbig" x="28" y="272" opacity="0" filter="url(#glow)">'
-       f'<animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="6.7s" fill="freeze"/>{prof["name"]}</text>')
-    ap(fade(30, 298, "role", prof["role"], 7.1))
-    ap(fade(30, 320, "dim", prof["stack"], 7.3))
+    ap(type_line(28, 260, "govindtank --profile", 5.8, 0.8, "c2"))
+    ap(f'<text class="hdrbig" x="28" y="292" opacity="0" filter="url(#glow)">'
+       f'<animate attributeName="opacity" from="0" to="1" dur="0.5s" begin="6.9s" fill="freeze"/>{prof["name"]}</text>')
+    ap(fade(30, 318, "role", prof["role"], 7.3))
+    ap(fade(30, 340, "dim", prof["stack"], 7.5))
 
-    # 3. libs command
-    ap(type_line(28, 360, "govindtank libs", 7.9, 0.6, "c3"))
+    # 3. libs command - show ALL libraries (pub.dev + JitPack)
+    ap(type_line(28, 380, "govindtank libs", 8.1, 0.6, "c3"))
     for i, p in enumerate(pkgs):
-        b = 8.5 + i * 0.35
-        ap(fade_parts(48, 386 + i * 24, b, [
+        b = 8.7 + i * 0.32
+        platform_tag = "pub.dev" if p["url"].startswith("https://pub.dev/") else "JitPack"
+        ap(fade_parts(48, 406 + i * 22, b, [
             ("cmd", p["name"], 0),
-            ("pp", "v" + p["version"], 350),
-            ("ok", p["score"], 452),
+            ("pp", platform_tag, 320),
+            ("ok", "v" + p["version"], 420),
         ]))
 
     # 4. whoami
-    ap(type_line(28, 494, "govindtank whoami", 10.2, 0.7, "c4"))
-    ap(fade(28, 520, "pk", prof["motto"], 11.2))
-    ap(fade(28, 546, "ok", "&#10003; install complete — govindtank-profile {v} is live".format(v=prof["version"]), 11.6))
+    ap(type_line(28, 590, "govindtank whoami", 10.8, 0.7, "c4"))
+    ap(fade(28, 616, "pk", prof["motto"], 11.8))
+    ap(fade(28, 642, "ok", "✔ install complete — govindtank-profile {v} is live".format(v=prof["version"]), 12.2))
 
     # final prompt + blinking cursor
-    ap(f'<text class="prompt" x="28" y="570" opacity="0"><animate attributeName="opacity" from="0" to="1" '
-       f'dur="0.05s" begin="12.0s" fill="freeze"/>$</text>')
-    ap(f'<rect x="48" y="554" width="11" height="22" rx="2" fill="#39d353" opacity="0">'
-       f'<animate attributeName="opacity" values="1;0;1" dur="1s" begin="12.2s" repeatCount="indefinite"/></rect>')
+    ap(f'<text class="prompt" x="28" y="668" opacity="0"><animate attributeName="opacity" from="0" to="1" '
+       f'dur="0.05s" begin="12.6s" fill="freeze"/>$</text>')
+    ap(f'<rect x="48" y="652" width="11" height="22" rx="2" fill="#39d353" opacity="0">'
+       f'<animate attributeName="opacity" values="1;0;1" dur="1s" begin="12.8s" repeatCount="indefinite"/></rect>')
 
     defs = f"""
   <defs>
