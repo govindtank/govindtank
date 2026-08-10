@@ -12,7 +12,7 @@
         "validateForCountry(\"IN\",\"98765 43210\")",
         "isMobileLength(\"IN\", 10)   // true"
       ],
-      "tag": "zero native deps · libphonenumber metadata · mobile-only",
+      "tag": "pub.dev · Dart · mobile-only · libphonenumber",
       "url": "https://pub.dev/packages/country_mobile_validator",
       "desc": "Country-aware mobile number validation on real libphonenumber data. Pure Dart, no native code."
     },
@@ -28,7 +28,7 @@
         "WhisperStream.start(audioBytes)",
         "stream.listen(onPartial, onCancel)"
       ],
-      "tag": "whisper.cpp bridge · offline STT · streaming + cancel",
+      "tag": "pub.dev · Dart · whisper.cpp · offline STT",
       "url": "https://pub.dev/packages/flutter_whisper",
       "desc": "Streaming speech-to-text on-device via whisper.cpp. Zero cloud cost, works offline, cancelable."
     },
@@ -44,7 +44,7 @@
         "WaveformView(painter: GpuPainter())",
         "controller.zoomTo(60fps, region)"
       ],
-      "tag": "GPU shader rasterizer · 60fps zoom · peak markers",
+      "tag": "pub.dev · Dart · GPU shader · 60fps zoom",
       "url": "https://pub.dev/packages/waveform_pro",
       "desc": "Audio waveform rendering that holds 60fps on huge files — GPU rasterization via fragment shader."
     },
@@ -60,14 +60,78 @@
         "QuoteCanvas.render(\"Code is poetry\")",
         "..withGradient()..withShadow()"
       ],
-      "tag": "text-on-canvas engine · gradient · stroke · PNG export",
+      "tag": "pub.dev · Dart · text-on-canvas · PNG export",
       "url": "https://pub.dev/packages/quote_painter",
       "desc": "Render quote images straight from Dart: gradient, stroke, shadow, per-line alignment, PNG export."
+    },
+    {
+      "name": "capture-improvement-kotlin",
+      "version": "v1.0.0",
+      "score": "JitPack",
+      "color": "#fb923c",
+      "color2": "#f97316",
+      "icon": "&#128247;",
+      "iconColor": "#fb923c",
+      "code": [
+        "BlurDetector.analyze(frame)",
+        "AngleMatcher.match(reference)"
+      ],
+      "tag": "JitPack · Kotlin · CameraX · re-photography",
+      "url": "https://github.com/govindtank/capture-improvement-kotlin",
+      "desc": "Android native library for blur detection, angle/pose matching, and orientation detection — CameraX + Kotlin DSL."
+    },
+    {
+      "name": "cmp-clipboard",
+      "version": "v1.0.0",
+      "score": "JitPack",
+      "color": "#38bdf8",
+      "color2": "#0ea5e9",
+      "icon": "&#128203;",
+      "iconColor": "#38bdf8",
+      "code": [
+        "val manager = rememberClipboardManager()",
+        "manager.writeText(\"Hello KMP\")"
+      ],
+      "tag": "JitPack · Kotlin Multiplatform · Compose",
+      "url": "https://github.com/govindtank/cmp-clipboard",
+      "desc": "Unified clipboard API for Compose Multiplatform. Read/write text and images on Android and iOS."
+    },
+    {
+      "name": "cmp-keyboard",
+      "version": "v1.0.0",
+      "score": "JitPack",
+      "color": "#a3e635",
+      "color2": "#84cc16",
+      "icon": "&#9000;",
+      "iconColor": "#a3e635",
+      "code": [
+        "KeyboardAwareColumn(modifier)",
+        "// auto-adjusts on soft-keyboard open"
+      ],
+      "tag": "JitPack · Kotlin Multiplatform · Compose",
+      "url": "https://github.com/govindtank/cmp-keyboard",
+      "desc": "Reactive keyboard-aware layout for Compose Multiplatform. Handles software keyboard on Android and iOS."
+    },
+    {
+      "name": "cmp-linked-text",
+      "version": "v1.0.0",
+      "score": "JitPack",
+      "color": "#f472b6",
+      "color2": "#ec4899",
+      "icon": "&#128279;",
+      "iconColor": "#f472b6",
+      "code": [
+        "LinkedText(\"Visit https://...\")",
+        "// auto-detects URLs, emails, phones"
+      ],
+      "tag": "JitPack · Kotlin Multiplatform · Compose",
+      "url": "https://github.com/govindtank/cmp-linked-text",
+      "desc": "Auto-detects URLs, emails, and phone numbers in text and renders them as clickable links in Compose Multiplatform."
     }
   ],
   "header": {
     "title": "THE ARSENAL",
-    "sub": "4 published packages · combined pana 640/640 · zero native deps · all in production"
+    "sub": "8 published libraries · 4 pub.dev + 4 JitPack · Flutter + Kotlin Multiplatform · all in production"
   },
   "profile": {
     "name": "GOVIND TANK",
