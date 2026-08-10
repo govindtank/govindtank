@@ -12,9 +12,15 @@
 
 ## The Arsenal — Published Packages
 
-<img src="assets/library-demo.svg" width="780" alt="Govind Tank's published Flutter libraries" style="max-width:100%; border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
+| Package | Version | Description | Links |
+|---|---|---|---|
+| **country_mobile_validator** | `0.2.0` | Validate mobile numbers per country using real length ranges (8–10, 10–11 digits), mobile-only detection, and a `country_code_picker`-friendly API. Pure Dart, ~8 µs per validation. | [pub.dev](https://pub.dev/packages/country_mobile_validator) · [GitHub](https://github.com/govindtank/country_mobile_validator) |
+| **quote_painter** | `0.1.0` | Render styled text on image/video canvas with gradient fill, stroke, shadow, per-line alignment, emoji support, and PNG export. | [pub.dev](https://pub.dev/packages/quote_painter) · [GitHub](https://github.com/govindtank/quote_painter) |
+| **waveform_pro** | `1.0.2` | Production-quality waveform widget with GPU-accelerated rendering, pinch-to-zoom, region selection, cue markers, time ruler, and audio peak extraction. | [pub.dev](https://pub.dev/packages/waveform_pro) · [GitHub](https://github.com/govindtank/waveform_pro) |
+| **flutter_whisper** | `0.1.0` | On-device speech-to-text using `whisper.cpp`. Automatic model download, streaming segment results, Android support. Privacy-first, no cloud. | [pub.dev](https://pub.dev/packages/flutter_whisper) · [GitHub](https://github.com/govindtank/flutter_whisper) |
 
-*Versions above refresh automatically from pub.dev — check [all packages](https://pub.dev/publishers/pub.dartlang.org/author/govindtank).*
+> **4 packages published** — all built for production, scored 160/160 on pub.dev, and maintained with refreshable metadata.  
+> Explore the full set at [pub.dev → govindtank](https://pub.dev/publishers/pub.dartlang.org/author/govindtank).
 
 > 🎮 Try the **interactive version** — live typing terminal with replay, clickable library cards: [govindtank.github.io/viewer](https://govindtank.github.io/viewer/)
 
