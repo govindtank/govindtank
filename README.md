@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-12` **v2** — Create CNAME
+- `2026-08-12` **govindtank.github.io** — blog: add MCP in Practice and Kotlin 2.x K2 Compiler posts + fix blog_
 - `2026-08-12` **govindtank** — feat: install-flow terminal intro, fixed name cutoff/version text
 - `2026-08-12` **govindtank** — feat: premium terminal intro with scanlines, dividers, glow, and align
 - `2026-08-12` **govindtank** — feat: cleaner aligned terminal intro layout for README profile
-- `2026-08-12` **govindtank** — feat: improved terminal intro spacing, grouping, effects, fixed URLs
-- `2026-08-12` **govindtank** — refactor: remove Arsenal card section, expand terminal intro with Kotl
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
