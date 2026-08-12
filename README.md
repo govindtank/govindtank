@@ -19,9 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-10` **govindtank** — feat: expand terminal intro with Kotlin libs + pub.dev section grouping
-- `2026-08-10` **govindtank** — feat: remove Arsenal card section, focus on terminal profile hero
-- `2026-08-10` **govindtank** — feat: cleaner Arsenal SVG layout, drop GIF, keep snake untouched
+- `2026-08-12` **govindtank** — feat: install-flow terminal intro, fixed name cutoff/version text
+- `2026-08-12` **govindtank** — feat: premium terminal intro with scanlines, dividers, glow, and align
+- `2026-08-12` **govindtank** — feat: cleaner aligned terminal intro layout for README profile
+- `2026-08-12` **govindtank** — feat: improved terminal intro spacing, grouping, effects, fixed URLs
+- `2026-08-12` **govindtank** — refactor: remove Arsenal card section, expand terminal intro with Kotl
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
