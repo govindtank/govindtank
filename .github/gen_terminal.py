@@ -1,16 +1,6 @@
 #!/usr/bin/env python3
 """Generate assets/terminal-intro.svg — premium CLI-install profile hero.
-- Commands type character-by-character (discrete clip steps).
-- Single pass: plays once, holds final state with blinking cursor (no flashing loop).
-- --live: fetch GitHub stats (repos/followers/stars) from the API.
-Font: .github/fonts/SpaceGrotesk.ttf embedded as data URI.
-
-Premium upgrades:
-- Subtle scanline/noise overlay for texture
-- Richer terminal palette with better contrast
-- Thin neon section dividers
-- Subtle glow/pulse effects on progress and headers
-- Consistent left rail and narrower content column
+Simulates installing a developer profile package with realistic step-by-step loading.
 """
 import base64
 import json
@@ -24,7 +14,7 @@ FONT = ROOT / ".github" / "fonts" / "SpaceGrotesk.ttf"
 PKG_JSON = ROOT / ".github" / "packages.json"
 OUT = ROOT / "assets" / "terminal-intro.svg"
 
-W, H = 820, 940
+W, H = 880, 1040
 MONO = "'JetBrains Mono','Fira Code','SF Mono',Menlo,monospace"
 SG = "'Space Grotesk',system-ui,sans-serif"
 FONT_B64 = base64.b64encode(FONT.read_bytes()).decode()
@@ -57,10 +47,10 @@ def fade_parts(x, y, begin, parts):
     return (f'<g opacity="0"><animate attributeName="opacity" from="0" to="1" dur="0.2s" '
             f'begin="{begin}s" fill="freeze"/>{inner}</g>')
 
-def divider(x, y, w, begin, dur=0.4):
+def divider(x, y, w, begin, dur=0.5):
     return (f'<rect x="{x}" y="{y}" width="0" height="1" rx="1" fill="url(#dividerGrad)" opacity="0">'
-            f'<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="{begin}s" fill="freeze"/>'
-            f'{anim("width", f"0;{w}", dur, begin + 0.05)}</rect>')
+            f'<animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="{begin}s" fill="freeze"/>'
+            f'{anim("width", f"0;{w}", dur, begin + 0.1)}</rect>')
 
 def fetch_stats():
     import os
@@ -118,25 +108,27 @@ def main():
     d = []
     ap = d.append
 
-    LEFT = 28
-    CONTENT_W = 764
+    LEFT = 32
+    INDENT = LEFT + 24
+    CONTENT_W = 816
 
-    # --- Header / Install ---
-    ap(type_line(LEFT, 92, prof["installer"], 0.4, 1.5, "c1"))
-    ap(fade(LEFT, 124, "dim", f"▸ installing govindtank-profile {prof['version']} — {n_pkgs} libraries, {repos} repos, {followers} followers", 2.0))
+    # ── Step 1: Install command ──
+    ap(type_line(LEFT, 96, prof["installer"], 0.3, 1.8, "c1"))
+    ap(fade(LEFT, 130, "dim", f"▸ installing govindtank-profile {prof['version']} — {n_pkgs} libraries, {repos} repos, {followers} followers", 2.0))
 
-    ap(f'<rect x="{LEFT}" y="142" width="{CONTENT_W}" height="10" rx="5" fill="#13171f" opacity="0">'
+    # Progress bar
+    ap(f'<rect x="{LEFT}" y="148" width="{CONTENT_W}" height="10" rx="5" fill="#13171f" opacity="0">'
        f'<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="2.0s" fill="freeze"/></rect>')
-    ap(f'<rect x="{LEFT}" y="142" width="0" height="10" rx="5" fill="url(#progGrad)" opacity="0">'
+    ap(f'<rect x="{LEFT}" y="148" width="0" height="10" rx="5" fill="url(#progGrad)" opacity="0">'
        f'<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="2.0s" fill="freeze"/>'
-       f'{anim("width", f"0;{CONTENT_W}", 1.8, 2.1)}</rect>')
-    ap(fade(LEFT + CONTENT_W - 60, 136, "cy", "100%", 2.1, anchor="end"))
-    ap(fade(LEFT, 158, "ok", "✔ dependencies resolved — all checks passed", 3.8))
+       f'{anim("width", f"0;{CONTENT_W}", 2.0, 2.1)}</rect>')
+    ap(fade(LEFT + CONTENT_W - 70, 142, "cy", "100%", 2.4, anchor="end"))
+    ap(fade(LEFT, 168, "ok", "✔ dependencies resolved — all checks passed", 4.0))
 
-    ap(divider(LEFT, 176, CONTENT_W, 3.9))
+    ap(divider(LEFT, 188, CONTENT_W, 4.2))
 
-    # --- Skills ---
-    ap(type_line(LEFT, 200, "govindtank --skills", 4.0, 0.7, "c2"))
+    # ── Step 2: Skills extraction ──
+    ap(type_line(LEFT, 214, "govindtank --skills", 4.4, 0.7, "c2"))
 
     skills = [
         "✔ Flutter • Android Studio • Kotlin",
@@ -145,72 +137,73 @@ def main():
         "✔ On-Device AI • Whisper.cpp • MediaPipe",
     ]
     for i, skill in enumerate(skills):
-        ap(fade(LEFT + 20, 234 + i * 26, "skill", skill, 4.0 + i * 0.12))
+        ap(fade(INDENT, 248 + i * 28, "skill", skill, 4.4 + i * 0.15))
 
-    ap(divider(LEFT, 334, CONTENT_W, 5.6))
+    ap(divider(LEFT, 362, CONTENT_W, 5.8))
 
-    # --- Build ---
-    ap(type_line(LEFT, 360, "govindtank --build", 6.0, 0.7, "c3"))
+    # ── Step 3: Build summary ──
+    ap(type_line(LEFT, 388, "govindtank --build", 6.0, 0.7, "c3"))
 
-    ap(fade(LEFT + 20, 394, "ok", f"├── {repos} repositories built across Flutter • Kotlin • Python", 6.0 + 0.15))
+    ap(fade(INDENT, 422, "ok", f"├── {repos} repositories built across Flutter • Kotlin • Python", 6.0 + 0.15))
     pub_count = sum(1 for p in pkgs if p["url"].startswith("https://pub.dev/"))
     jit_count = len(pkgs) - pub_count
-    ap(fade(LEFT + 20, 422, "ok", f"├── {n_pkgs} packages: {pub_count} × pub.dev • {jit_count} × JitPack", 6.15))
-    ap(fade(LEFT + 20, 450, "ok", f"└── {prof['apps']} Play Store apps • {prof.get('dashboards', 3)} live dashboards shipped in production", 6.3))
+    ap(fade(INDENT, 450, "ok", f"├── {n_pkgs} packages: {pub_count} × pub.dev • {jit_count} × JitPack", 6.15))
+    ap(fade(INDENT, 478, "ok", f"└── {prof['apps']} Play Store apps • {prof.get('dashboards', 3)} live dashboards shipped in production", 6.3))
 
-    ap(divider(LEFT, 470, CONTENT_W, 6.8))
+    ap(divider(LEFT, 498, CONTENT_W, 6.9))
 
-    # --- Profile ---
-    ap(type_line(LEFT, 494, "govindtank --profile", 7.0, 0.6, "c4"))
+    # ── Step 4: Profile with proper left-aligned name ──
+    ap(type_line(LEFT, 524, "govindtank --profile", 7.1, 0.6, "c4"))
 
-    ap(f'<text class="hdrbig" x="{LEFT}" y="534" opacity="0" filter="url(#nameGlow)">'
-       f'<animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="7.9s" fill="freeze"/>{prof["name"]}</text>')
-    ap(fade(LEFT + 2, 576, "role", prof["role"], 8.4))
-    ap(fade(LEFT + 2, 600, "dim", prof["stack"], 8.7))
+    # Name left-aligned with glow, no text-anchor="middle"
+    ap(f'<text class="hdrbig" x="{LEFT}" y="568" opacity="0" filter="url(#nameGlow)">'
+       f'<animate attributeName="opacity" from="0" to="1" dur="0.7s" begin="8.0s" fill="freeze"/>{prof["name"]}</text>')
+    ap(fade(LEFT + 2, 608, "role", prof["role"], 8.6))
+    ap(fade(LEFT + 2, 632, "dim", prof["stack"], 8.9))
 
-    ap(divider(LEFT, 618, CONTENT_W, 9.0))
+    ap(divider(LEFT, 652, CONTENT_W, 9.2))
 
-    # --- Libraries ---
-    ap(type_line(LEFT, 644, "govindtank libs", 9.0, 0.5, "c3"))
+    # ── Step 5: Libraries ──
+    ap(type_line(LEFT, 678, "govindtank libs", 9.3, 0.5, "c3"))
 
     pub_pkgs = [p for p in pkgs if p["url"].startswith("https://pub.dev/")]
     jit_pkgs = [p for p in pkgs if not p["url"].startswith("https://pub.dev/")]
 
-    ap(fade(LEFT + 20, 674, "pp", "── pub.dev ─────────────────────────────────────────────", 9.3))
+    ap(fade(INDENT, 710, "pp", "── pub.dev ─────────────────────────────────────────────", 9.5))
 
     for i, p in enumerate(pub_pkgs):
-        y = 708 + i * 28
-        ap(fade_parts(LEFT + 20, y, 9.5 + i * 0.12, [
+        y = 744 + i * 30
+        ap(fade_parts(INDENT, y, 9.7 + i * 0.14, [
             ("cmd", f"[{p['name']}] {p['version']}", 0),
-            (p["color"], p["url"], 340),
+            (p["color"], p["url"], 360),
         ]))
 
-    y_jit = 708 + len(pub_pkgs) * 28 + 18
-    ap(fade(LEFT + 20, y_jit, "pp", "── JitPack ──────────────────────────────────────────────", 9.5 + len(pub_pkgs) * 0.12 + 0.1))
+    y_jit = 744 + len(pub_pkgs) * 30 + 20
+    ap(fade(INDENT, y_jit, "pp", "── JitPack ──────────────────────────────────────────────", 9.7 + len(pub_pkgs) * 0.14 + 0.1))
 
     for i, p in enumerate(jit_pkgs):
-        y = y_jit + 20 + i * 28
-        ap(fade_parts(LEFT + 20, y, 9.7 + len(pub_pkgs) * 0.12 + 0.1 + i * 0.12, [
+        y = y_jit + 22 + i * 30
+        ap(fade_parts(INDENT, y, 9.9 + len(pub_pkgs) * 0.14 + 0.1 + i * 0.14, [
             ("cmd", f"[{p['name']}] {p['version']}", 0),
-            (p["color"], p["url"], 340),
+            (p["color"], p["url"], 360),
         ]))
 
-    ap(divider(LEFT, y_jit + 20 + len(jit_pkgs) * 28 + 8, CONTENT_W, 10.6))
+    ap(divider(LEFT, y_jit + 22 + len(jit_pkgs) * 30 + 10, CONTENT_W, 10.8))
 
-    # --- Whoami ---
-    whoami_y = y_jit + 20 + len(jit_pkgs) * 28 + 30
-    ap(type_line(LEFT, whoami_y, "govindtank whoami", 11.5, 0.5, "c4"))
-    ap(fade(LEFT + 20, whoami_y + 30, "pk", prof["motto"], 12.5))
-    ap(fade(LEFT + 20, whoami_y + 60, "dim", "✔ setup complete — ready to ship", 13.0))
+    # ── Step 6: Whoami ──
+    whoami_y = y_jit + 22 + len(jit_pkgs) * 30 + 34
+    ap(type_line(LEFT, whoami_y, "govindtank whoami", 11.6, 0.5, "c4"))
+    ap(fade(INDENT, whoami_y + 32, "pk", prof["motto"], 12.6))
+    ap(fade(INDENT, whoami_y + 62, "dim", "✔ setup complete — ready to ship", 13.0))
 
-    # --- Final prompt + blinking cursor ---
-    final_y = whoami_y + 100
+    # ── Final prompt with blinking cursor ──
+    final_y = whoami_y + 104
     ap(f'<text class="prompt" x="{LEFT}" y="{final_y}" opacity="0"><animate attributeName="opacity" from="0" to="1" '
-       f'dur="0.05s" begin="13.3s" fill="freeze"/>$</text>')
+       f'dur="0.05s" begin="13.4s" fill="freeze"/>$</text>')
     ap(f'<rect x="{LEFT + 20}" y="{final_y - 16}" width="11" height="22" rx="2" fill="#39d353" opacity="0">'
-       f'<animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="13.5s" repeatCount="indefinite"/></rect>')
+       f'<animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="13.6s" repeatCount="indefinite"/></rect>')
 
-    # --- SVG Defs ---
+    # ── SVG Defs ──
     defs = f"""
   <defs>
     <style>
@@ -227,7 +220,7 @@ def main():
       .pp    {{ fill:#d2a8ff; font-size:14px; font-family:{MONO}; opacity:0.9; letter-spacing:0.5px; }}
       .skill {{ fill:#8b949e; font-size:14px; font-family:{MONO}; opacity:0.92; }}
       .role  {{ fill:url(#nameGrad); font-size:20px; font-weight:600; letter-spacing:0.5px; font-family:{SG}; }}
-      .hdrbig{{ fill:url(#nameGrad); font-size:34px; font-weight:700; letter-spacing:1px; text-anchor:middle; font-family:{SG}; filter:url(#nameGlow); }}
+      .hdrbig{{ fill:url(#nameGrad); font-size:34px; font-weight:700; letter-spacing:1px; text-anchor:start; font-family:{SG}; filter:url(#nameGlow); }}
     </style>
     <linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#7ee787"/><stop offset="100%" stop-color="#f778ba"/>
@@ -244,10 +237,6 @@ def main():
     </linearGradient>
     <filter id="nameGlow" x="-50%" y="-50%" width="200%" height="200%">
       <feGaussianBlur stdDeviation="7" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
-      <feGaussianBlur stdDeviation="3" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
     <pattern id="scanlines" x="0" y="0" width="1" height="4" patternUnits="userSpaceOnUse">
@@ -269,10 +258,10 @@ def main():
   <rect x="0" y="0" width="{W}" height="56" rx="20" fill="url(#winGrad)"/>
   <rect x="0" y="52" width="{W}" height="4" fill="#161b22"/>
   <circle class="dotr" cx="30" cy="28" r="7"/><circle class="doty" cx="59" cy="28" r="7"/><circle class="dotg" cx="90" cy="28" r="7"/>
-  <text class="mono" x="410" y="36" text-anchor="middle" fill="#8b949e" font-size="12px">govindtank@github — CLI installer v{prof["version"]}</text>
+  <text class="mono" x="440" y="36" text-anchor="middle" fill="#8b949e" font-size="12px">govindtank@github — CLI installer {prof["version"]}</text>
   <g clip-path="url(#bodyClip)">
-    <rect x="0" y="56" width="{W}" height="{H - 56}" fill="url(#scanlines)" opacity="0.6"/>
-    <rect x="0" y="56" width="{W}" height="{H - 56}" fill="url(#noise)" opacity="0.6"/>
+    <rect x="0" y="56" width="{W}" height="{H - 56}" fill="url(#scanlines)" opacity="0.5"/>
+    <rect x="0" y="56" width="{W}" height="{H - 56}" fill="url(#noise)" opacity="0.5"/>
 """
 
     svg = (f'<?xml version="1.0" encoding="UTF-8"?>\n'
