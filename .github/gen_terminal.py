@@ -6,10 +6,9 @@
 Font: .github/fonts/SpaceGrotesk.ttf embedded as data URI.
 
 Design upgrades:
-- More vertical spacing between lines
-- Cleaner minimal card layout with subtle glow effects
-- Techy coding aesthetic (monospaced, terminal-green accents)
-- Better visual hierarchy and readability
+- Clean aligned layout with consistent spacing
+- Better visual hierarchy
+- Professional terminal aesthetic
 """
 import base64
 import json
@@ -23,7 +22,7 @@ FONT = ROOT / ".github" / "fonts" / "SpaceGrotesk.ttf"
 PKG_JSON = ROOT / ".github" / "packages.json"
 OUT = ROOT / "assets" / "terminal-intro.svg"
 
-W, H = 820, 920  # Taller canvas for better spacing
+W, H = 820, 940
 MONO = "'JetBrains Mono','Fira Code','SF Mono',Menlo,monospace"
 SG = "'Space Grotesk',system-ui,sans-serif"
 FONT_B64 = base64.b64encode(FONT.read_bytes()).decode()
@@ -46,7 +45,7 @@ def type_line(x, y, cmd, begin, dur, cid, cw=9.2):
             f'<text class="cmd" x="{x + 20}" y="{y}" clip-path="url(#{cid})">{cmd}</text>'
             + clip_def(cid, y - 16, 24, n, cw, dur, begin))
 
-def fade(x, y, cls, text, begin, anchor=None, weight=400):
+def fade(x, y, cls, text, begin, anchor=None):
     a = f' text-anchor="{anchor}"' if anchor else ''
     return (f'<text class="{cls}" x="{x}" y="{y}"{a} opacity="0"><animate attributeName="opacity" '
             f'from="0" to="1" dur="0.2s" begin="{begin}s" fill="freeze"/>{text}</text>')
@@ -112,102 +111,91 @@ def main():
     d = []
     ap = d.append
 
-    # --- Section 1: Install Command (Techy typing effect with glow) ---
+    # Section 1: Install command
     ap(type_line(28, 92, prof["installer"], 0.4, 1.5, "c1"))
     
-    # Glowing terminal banner
-    ap(f'<rect x="28" y="124" width="460" height="14" rx="7" fill="#0d1117">'
-       f'<animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="1.5s" fill="freeze"/>'
-       f'<filter id="bannerGlow"><feGaussianBlur stdDeviation="3"/></filter></rect>')
-    ap(fade(28, 124, "dim", "▸ installing govindtank-profile {v} — {n} libraries, {r} repos, {f} followers".format(
-        v=prof["version"], n=n_pkgs, r=repos, f=followers), 2.0, weight=300))
-
-    # Progress bar with techy gradient
-    ap(f'<rect x="28" y="142" width="460" height="12" rx="6" fill="#161b22">'
-       f'<animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="2.0s" fill="freeze"/></rect>')
-    ap(f'<rect x="28" y="142" width="0" height="12" rx="6" fill="url(#progGrad)" opacity="0">'
-       f'<animate attributeName="opacity" from="0" to="1" dur="0.1s" begin="2.0s" fill="freeze"/>'
+    # Installing banner
+    ap(fade(28, 124, "dim", f"▸ installing govindtank-profile {prof['version']} — {n_pkgs} libraries, {repos} repos, {followers} followers", 2.0))
+    
+    # Progress bar
+    ap(f'<rect x="28" y="142" width="460" height="10" rx="5" fill="#21262d" opacity="0">'
+       f'<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="2.0s" fill="freeze"/></rect>')
+    ap(f'<rect x="28" y="142" width="0" height="10" rx="5" fill="url(#progGrad)" opacity="0">'
+       f'<animate attributeName="opacity" from="0" to="1" dur="0.05s" begin="2.0s" fill="freeze"/>'
        f'{anim("width", "0;460", 1.8, 2.1)}</rect>')
     ap(fade(500, 136, "cy", "100%", 2.1))
-    ap(fade(28, 142, "ok", "✔ dependencies resolved — all checks passed", 3.8, weight=500))
+    ap(fade(28, 158, "ok", "✔ dependencies resolved — all checks passed", 3.8))
 
-    # --- Section 2: Skills Extraction (Clean techy list) ---
-    ap(type_line(28, 196, "govindtank --skills", 4.0, 0.7, "c2"))
+    # Section 2: Skills
+    ap(type_line(28, 200, "govindtank --skills", 4.0, 0.7, "c2"))
     
-    skills_items = [
-        ("✔ Flutter • Android Studio • Kotlin", "skill"),
-        ("✔ Python • TensorFlow Lite • ONNX Runtime", "skill"),
-        ("✔ Data Dashboards • Plotly • Flask", "skill"),
-        ("✔ On-Device AI • Whisper.cpp • MediaPipe", "skill"),
+    skills = [
+        "✔ Flutter • Android Studio • Kotlin",
+        "✔ Python • TensorFlow Lite • ONNX Runtime",
+        "✔ Data Dashboards • Plotly • Flask",
+        "✔ On-Device AI • Whisper.cpp • MediaPipe",
     ]
-    
-    base_y = 230
-    for i, (text, cls) in enumerate(skills_items):
-        ap(fade(28, base_y + i * 28, cls, text, 4.0 + i * 0.15, weight=400))
+    for i, skill in enumerate(skills):
+        ap(fade(48, 234 + i * 26, "skill", skill, 4.0 + i * 0.12))
 
-    # --- Section 3: Build Summary (Minimal card layout) ---
+    # Section 3: Build summary
     ap(type_line(28, 340, "govindtank --build", 6.0, 0.7, "c3"))
     
-    ap(fade(28, 370, "ok", f"├── {repos} repositories built across Flutter • Kotlin • Python", 6.0 + 0.15))
+    ap(fade(28, 374, "ok", f"├── {repos} repositories built across Flutter • Kotlin • Python", 6.0 + 0.15))
     pub_count = sum(1 for p in pkgs if p["url"].startswith("https://pub.dev/"))
     jit_count = len(pkgs) - pub_count
-    ap(fade(28, 398, "ok", f"├── {n_pkgs} packages: {pub_count} × pub.dev • {jit_count} × JitPack", 6.15))
-    play_apps = prof["apps"]
-    dashboards = prof.get("dashboards", 3)
-    ap(fade(28, 426, "ok", f"└── {play_apps} Play Store apps • {dashboards} live dashboards shipped in production", 6.3))
+    ap(fade(28, 402, "ok", f"├── {n_pkgs} packages: {pub_count} × pub.dev • {jit_count} × JitPack", 6.15))
+    ap(fade(28, 430, "ok", f"└── {prof['apps']} Play Store apps • {prof.get('dashboards', 3)} live dashboards shipped in production", 6.3))
 
-    # --- Section 4: Profile Hero (Bold terminal-style) ---
-    ap(type_line(28, 500, "govindtank --profile", 7.0, 0.6, "c4"))
+    # Section 4: Profile
+    ap(type_line(28, 490, "govindtank --profile", 7.0, 0.6, "c4"))
     
-    # Name with animated gradient glow
-    name_grad = '''<linearGradient id="nameGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22d3ee"/><stop offset="50%" stop-color="#7ee787"/><stop offset="100%" stop-color="#f778ba"/>
-    </linearGradient>'''
-    ap(f'<text class="hdrbig" x="28" y="542" opacity="0" filter="url(#nameGlow)">'
+    ap(f'<text class="hdrbig" x="28" y="530" opacity="0" filter="url(#nameGlow)">'
        f'<animate attributeName="opacity" from="0" to="1" dur="0.6s" begin="7.9s" fill="freeze"/>{prof["name"]}</text>')
-    ap(fade(30, 588, "role", prof["role"], 8.4))
-    ap(fade(30, 612, "dim", prof["stack"], 8.7))
+    ap(fade(30, 572, "role", prof["role"], 8.4))
+    ap(fade(30, 596, "dim", prof["stack"], 8.7))
 
-    # --- Section 5: Libraries Grid (Clean grouped layout) ---
-    ap(type_line(28, 690, "govindtank libs", 9.0, 0.5, "c3"))
+    # Section 5: Libraries
+    ap(type_line(28, 650, "govindtank libs", 9.0, 0.5, "c3"))
     
-    # pub.dev section with techy header bar
-    pub_pkgs = [(i+1, p) for i, p in enumerate([x for x in pkgs if x["url"].startswith("https://pub.dev/")])]
-    jit_pkgs = [(i+1, p) for i, p in enumerate([x for x in pkgs if not x["url"].startswith("https://pub.dev/")])]
+    pub_pkgs = [p for p in pkgs if p["url"].startswith("https://pub.dev/")]
+    jit_pkgs = [p for p in pkgs if not p["url"].startswith("https://pub.dev/")]
     
-    ap(fade(48, 720, "pp", "══════ pub.dev ══════════════════════════════════════════════════════════", 9.3))
+    # pub.dev section
+    ap(fade(48, 680, "pp", "── pub.dev ─────────────────────────────────────────────────", 9.3))
     
-    y_pub = 758
-    for idx, p in pub_pkgs:
-        ap(fade_parts(48, y_pub + (idx - 1) * 26, 9.5, [
-            ("cmd", f"[{p['name']}] {p['version']} v", 0),
-            (p["color"], f"https://pub.dev/{p['name']}", 380),
-        ]))
-    
-    # JitPack section with techy header bar
-    y_jit = 758 + len(pub_pkgs) * 26 + 14
-    ap(fade(48, y_jit, "pp", "══════ JitPack ══════════════════════════════════════════════════════════", 9.3))
-    
-    for idx, p in jit_pkgs:
-        ap(fade_parts(48, y_jit + (idx - 1) * 26, 9.5 + 0.28, [
-            ("cmd", f"[{p['name']}] {p['version']} v", 0),
-            (p["color"], f"https://github.com/govindtank/{p['name']}", 380),
+    for i, p in enumerate(pub_pkgs):
+        y = 716 + i * 28
+        ap(fade_parts(48, y, 9.5 + i * 0.12, [
+            ("cmd", f"[{p['name']}] {p['version']}", 0),
+            (p["color"], p["url"], 340),
         ]))
 
-    # --- Section 6: Whoami & Motto (Minimal) ---
-    whoami_y = y_jit + len(jit_pkgs) * 26 + 40
+    # JitPack section
+    y_jit = 716 + len(pub_pkgs) * 28 + 16
+    ap(fade(48, y_jit, "pp", "── JitPack ─────────────────────────────────────────────────", 9.5))
+    
+    for i, p in enumerate(jit_pkgs):
+        y = y_jit + 20 + i * 28
+        ap(fade_parts(48, y, 9.7 + i * 0.12, [
+            ("cmd", f"[{p['name']}] {p['version']}", 0),
+            (p["color"], p["url"], 340),
+        ]))
+
+    # Section 6: Whoami
+    whoami_y = y_jit + 20 + len(jit_pkgs) * 28 + 30
     ap(type_line(28, whoami_y, "govindtank whoami", 11.5, 0.5, "c4"))
     ap(fade(28, whoami_y + 30, "pk", prof["motto"], 12.5))
     ap(fade(28, whoami_y + 60, "dim", "✔ setup complete — ready to ship", 13.0))
 
-    # --- Final prompt with techy cursor ---
+    # Final prompt with blinking cursor
     final_y = whoami_y + 100
     ap(f'<text class="prompt" x="28" y="{final_y}" opacity="0"><animate attributeName="opacity" from="0" to="1" '
        f'dur="0.05s" begin="13.3s" fill="freeze"/>$</text>')
     ap(f'<rect x="48" y="{final_y - 16}" width="11" height="22" rx="2" fill="#39d353" opacity="0">'
        f'<animate attributeName="opacity" values="1;0;1" dur="0.8s" begin="13.5s" repeatCount="indefinite"/></rect>')
 
-    # --- SVG Defs with techy styling ---
+    # SVG Defs
     defs = f"""
   <defs>
     <style>
@@ -222,6 +210,7 @@ def main():
       .cy    {{ fill:#22d3ee; font-size:14px; font-weight:500; font-family:{MONO}; opacity:0.9; text-shadow:0 0 6px rgba(34,211,238,0.3); }}
       .ok    {{ fill:#27c93f; font-size:14px; font-weight:500; font-family:{MONO}; opacity:0.95; text-shadow:0 0 6px rgba(39,201,63,0.3); }}
       .pp    {{ fill:#d2a8ff; font-size:14px; font-family:{MONO}; opacity:0.88; }}
+      .skill {{ fill:#8b949e; font-size:14px; font-family:{MONO}; opacity:0.9; }}
       .role  {{ fill:url(#nameGrad); font-size:20px; font-weight:600; letter-spacing:0.5px; font-family:{SG}; }}
       .hdrbig{{ fill:url(#nameGrad); font-size:32px; font-weight:700; letter-spacing:1px; text-anchor:middle; font-family:{SG}; }}
     </style>
@@ -234,14 +223,8 @@ def main():
     <linearGradient id="progGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#39d353"/><stop offset="100%" stop-color="#22d3ee"/>
     </linearGradient>
-    <!-- Glowing name effect -->
     <filter id="nameGlow" x="-40%" y="-40%" width="180%" height="180%">
       <feGaussianBlur stdDeviation="6" result="b"/>
-      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <!-- Banner glow -->
-    <filter id="bannerGlow" x="-50%" y="-50%" width="200%" height="200%">
-      <feGaussianBlur stdDeviation="4" result="b"/>
       <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
     </filter>
   </defs>
