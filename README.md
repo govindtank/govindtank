@@ -10,8 +10,6 @@
 
 ---
 
----
-
 ## Contribution Graph
 
 <img src="dist/github-snake.svg" width="100%" alt="GitHub contribution snake animation" style="border-radius:16px; box-shadow:0 12px 48px rgba(0,0,0,0.45);"/>
@@ -21,11 +19,9 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-10` **govindtank** — feat: cleaner Arsenal cards + terminal intro includes Kotlin libs
+- `2026-08-10` **govindtank** — feat: expand terminal intro with Kotlin libs + pub.dev section grouping
+- `2026-08-10` **govindtank** — feat: remove Arsenal card section, focus on terminal profile hero
 - `2026-08-10` **govindtank** — feat: cleaner Arsenal SVG layout, drop GIF, keep snake untouched
-- `2026-08-10` **govindtank** — chore: regenerate Arsenal GIF in CI
-- `2026-08-10` **govindtank** — feat: animated Arsenal GIF with scanlines + card reveal
-- `2026-08-10` **govindtank** — feat: expand Arsenal to 8 libraries with animated card grid
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
