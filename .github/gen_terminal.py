@@ -17,7 +17,7 @@ FONT = ROOT / ".github" / "fonts" / "SpaceGrotesk.ttf"
 PKG_JSON = ROOT / ".github" / "packages.json"
 OUT = ROOT / "assets" / "terminal-intro.svg"
 
-W, H = 820, 640
+W, H = 820, 760
 MONO = "'JetBrains Mono','Fira Code','SF Mono',Menlo,monospace"
 SG = "'Space Grotesk',system-ui,sans-serif"
 FONT_B64 = base64.b64encode(FONT.read_bytes()).decode()
@@ -136,26 +136,48 @@ def main():
     ap(fade(30, 318, "role", prof["role"], 7.3))
     ap(fade(30, 340, "dim", prof["stack"], 7.5))
 
-    # 3. libs command - show ALL libraries (pub.dev + JitPack)
+    # 3. libs command - show ALL libraries with better grouping
     ap(type_line(28, 380, "govindtank libs", 8.1, 0.6, "c3"))
-    for i, p in enumerate(pkgs):
-        b = 8.7 + i * 0.32
-        platform_tag = "pub.dev" if p["url"].startswith("https://pub.dev/") else "JitPack"
-        ap(fade_parts(48, 406 + i * 22, b, [
+    
+    # pub.dev section header
+    pub_pkgs = [p for p in pkgs if p["url"].startswith("https://pub.dev/")]
+    jit_pkgs = [p for p in pkgs if not p["url"].startswith("https://pub.dev/")]
+    
+    ap(fade(48, 406, "pp", "── pub.dev ─────────────────────────────────────────", 8.5))
+    
+    for i, p in enumerate(pub_pkgs):
+        b = 8.9 + i * 0.28
+        ap(fade_parts(48, 426 + i * 22, b, [
             ("cmd", p["name"], 0),
-            ("pp", platform_tag, 320),
-            ("ok", "v" + p["version"], 420),
+            ("ok", "v" + p["version"], 380),
         ]))
+        # Short description on next line
+        ap(fade(70, 440 + i * 22, "dim", p["tag"], 8.9 + i * 0.28 + 0.15))
+    
+    # JitPack section header
+    jit_start = 426 + len(pub_pkgs) * 22 + 10
+    ap(fade(48, jit_start, "pp", "── JitPack ─────────────────────────────────────────", 9.3))
+    
+    for i, p in enumerate(jit_pkgs):
+        b = 9.5 + i * 0.28
+        ap(fade_parts(48, jit_start + 20 + i * 22, b, [
+            ("cmd", p["name"], 0),
+            ("ok", "v" + p["version"], 380),
+        ]))
+        # Short description on next line
+        ap(fade(70, jit_start + 34 + i * 22, "dim", p["tag"], 9.5 + i * 0.28 + 0.15))
 
     # 4. whoami
-    ap(type_line(28, 590, "govindtank whoami", 10.8, 0.7, "c4"))
-    ap(fade(28, 616, "pk", prof["motto"], 11.8))
-    ap(fade(28, 642, "ok", "✔ install complete — govindtank-profile {v} is live".format(v=prof["version"]), 12.2))
+    whoami_y = jit_start + 20 + len(jit_pkgs) * 22 + 30
+    ap(type_line(28, whoami_y, "govindtank whoami", 10.8, 0.7, "c4"))
+    ap(fade(28, whoami_y + 26, "pk", prof["motto"], 11.8))
+    ap(fade(28, whoami_y + 50, "ok", "✔ install complete — govindtank-profile {v} is live".format(v=prof["version"]), 12.2))
 
     # final prompt + blinking cursor
-    ap(f'<text class="prompt" x="28" y="668" opacity="0"><animate attributeName="opacity" from="0" to="1" '
+    final_y = whoami_y + 80
+    ap(f'<text class="prompt" x="28" y="{final_y}" opacity="0"><animate attributeName="opacity" from="0" to="1" '
        f'dur="0.05s" begin="12.6s" fill="freeze"/>$</text>')
-    ap(f'<rect x="48" y="652" width="11" height="22" rx="2" fill="#39d353" opacity="0">'
+    ap(f'<rect x="48" y="{final_y - 16}" width="11" height="22" rx="2" fill="#39d353" opacity="0">'
        f'<animate attributeName="opacity" values="1;0;1" dur="1s" begin="12.8s" repeatCount="indefinite"/></rect>')
 
     defs = f"""
