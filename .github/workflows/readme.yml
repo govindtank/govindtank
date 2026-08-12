@@ -32,7 +32,6 @@ jobs:
 
       - name: Regenerate animated assets (live data)
         run: |
-          python .github/gen_arsenal.py --live
           python .github/gen_terminal.py --live
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -41,7 +40,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add README.md assets/terminal-intro.svg assets/library-demo.svg dist/github-snake.svg
+          git add README.md assets/terminal-intro.svg dist/github-snake.svg
           git diff --cached --quiet || git commit -m "chore: refresh readme"
           git pull --rebase origin master
           git push
