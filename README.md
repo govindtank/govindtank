@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-13` **govindtank.github.io** — blog: Agentic AI Development: From Chat Assistants to Autonomous Codin
+- `2026-08-13` **v2** — Delete CNAME
 - `2026-08-12` **v2** — Create CNAME
 - `2026-08-12` **govindtank.github.io** — blog: add MCP in Practice and Kotlin 2.x K2 Compiler posts + fix blog_
 - `2026-08-12` **govindtank** — feat: install-flow terminal intro, fixed name cutoff/version text
-- `2026-08-12` **govindtank** — feat: premium terminal intro with scanlines, dividers, glow, and align
-- `2026-08-12` **govindtank** — feat: cleaner aligned terminal intro layout for README profile
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
