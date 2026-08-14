@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-13` **govindtank.github.io** — blog: fallback post 2026-08-13
-- `2026-08-13` **govindtank.github.io** — chore: add fast blog cron fallback script
-- `2026-08-13` **govindtank.github.io** — blog: Flutter Beyond Mobile: Desktop, Web, and Embedded Targets in 202
-- `2026-08-13` **govindtank.github.io** — blog: Agentic AI Development: From Chat Assistants to Autonomous Codin
-- `2026-08-13` **v2** — Delete CNAME
+- `2026-08-14` **govindtank.github.io** — fix: remove duplicate frontmatter block from agentic AI blog
+- `2026-08-14` **govindtank.github.io** — fix: normalize blog frontmatter, dates, covers, and remove duplicate t
+- `2026-08-14` **govindtank.github.io** — fix: rewrite off-topic blog posts and fix TOC scroll highlighting
+- `2026-08-14` **govindtank.github.io** — fix: make blog cron fast-by-default with LLM health check
+- `2026-08-14` **govindtank.github.io** — blog: fallback post 2026-08-14
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
