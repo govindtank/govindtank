@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-15` **govindtank.github.io** — fix: make blog fallback path deterministic and robust
+- `2026-08-15` **govindtank.github.io** — fix: consolidate blog repo to ~/govindtank.github.io single source of 
+- `2026-08-15` **govindtank.github.io** — blog: AI-Native App Architecture: Designing Applications Around LLM Ca
 - `2026-08-14` **govindtank.github.io** — fix: remove duplicate frontmatter block from agentic AI blog
 - `2026-08-14` **govindtank.github.io** — fix: normalize blog frontmatter, dates, covers, and remove duplicate t
-- `2026-08-14` **govindtank.github.io** — fix: rewrite off-topic blog posts and fix TOC scroll highlighting
-- `2026-08-14` **govindtank.github.io** — fix: make blog cron fast-by-default with LLM health check
-- `2026-08-14` **govindtank.github.io** — blog: fallback post 2026-08-14
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
