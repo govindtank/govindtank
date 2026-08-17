@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-17` **depth-live-wallpaper-android** — Add README for Depth Live Wallpaper app
-- `2026-08-17` **livewally** — Fix formatting issue in README.md
-- `2026-08-17` **govindtank.github.io** — blog: Local-First Applications: Sync Engines, CRDTs, and Offline-First
-- `2026-08-16` **govindtank.github.io** — blog: On-Device AI with NPUs: Running Models on Phone Silicon in 2026 
-- `2026-08-15` **govindtank.github.io** — fix: make blog fallback path deterministic and robust
+- `2026-08-17` **govindtank.github.io** — increase home and related blog count from 3 to 5
+- `2026-08-17` **govindtank.github.io** — update testimonials: remove titles, use project owner framing
+- `2026-08-17` **govindtank.github.io** — use local project images for BAPS Prakash and Akshar Amrutam
+- `2026-08-17` **govindtank.github.io** — add testimonial project images and render support
+- `2026-08-17` **govindtank.github.io** — update testimonials: replace old references with 4 new ones
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
