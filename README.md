@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-18` **govindtank.github.io** — blog: RAG in Production: Practical Retrieval Patterns Beyond the Demo 
 - `2026-08-17` **govindtank.github.io** — increase home and related blog count from 3 to 5
 - `2026-08-17` **govindtank.github.io** — update testimonials: remove titles, use project owner framing
 - `2026-08-17` **govindtank.github.io** — use local project images for BAPS Prakash and Akshar Amrutam
 - `2026-08-17` **govindtank.github.io** — add testimonial project images and render support
-- `2026-08-17` **govindtank.github.io** — update testimonials: replace old references with 4 new ones
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
