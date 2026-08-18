@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-18` **govindtank.is-a.dev** — Initial commit: govindtank.is-a.dev portfolio
-- `2026-08-18` **govindtank.github.io** — blog: RAG in Production: Practical Retrieval Patterns Beyond the Demo 
-- `2026-08-17` **govindtank.github.io** — increase home and related blog count from 3 to 5
-- `2026-08-17` **govindtank.github.io** — update testimonials: remove titles, use project owner framing
-- `2026-08-17` **govindtank.github.io** — use local project images for BAPS Prakash and Akshar Amrutam
+- `2026-08-18` **unlock-count-live-wallpaper** — feat: add customization, particles, license, and README updates
+- `2026-08-18` **unlock-count-live-wallpaper** — fix: add launcher activity, capture real screenshots, update README
+- `2026-08-18` **livewally** — Delete CHANGES_SUMMARY.md
+- `2026-08-18` **livewally** — Delete IMPLEMENTATION_SUMMARY.md
+- `2026-08-18` **Data_Live_Wallpaper** — docs: redirect to modernized successor repo
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
