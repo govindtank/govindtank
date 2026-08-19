@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-19` **unlock-count-live-wallpaper** — feat: add random and trending picker actions, polish trend-forward sel
-- `2026-08-19` **unlock-count-live-wallpaper** — feat: redesign picker with glassmorphism grid, add 4 trend-forward mod
-- `2026-08-19` **unlock-count-live-wallpaper** — feat: add DataRepository, live previews, 11 data-driven wallpaper mode
-- `2026-08-19` **unlock-count-live-wallpaper** — fix: upgrade UI to production standard with NestedScrollView, Collapsi
-- `2026-08-19` **unlock-count-live-wallpaper** — feat: add wallpaper picker, 6 dynamic live wallpaper modes, real-time 
+- `2026-08-19` **livewally** — refactor: rename package to com.droidtank.livewally
+- `2026-08-19` **livewally** — feat: add Google Play Store submission artifacts and update build conf
+- `2026-08-19` **WallPulse** — docs: remove screenshot, enhance README style and structure
+- `2026-08-19` **WallPulse** — docs: replace README screenshot with actual device capture
+- `2026-08-19` **WallPulse** — docs: update README with WallPulse branding, full mode list, and scree
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
