@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-19` **unlock-count-live-wallpaper** — feat: replace button screen with stats dashboard, add history + custom
-- `2026-08-19` **govindtank.github.io** — blog: Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Dev
-- `2026-08-18` **unlock-count-live-wallpaper** — feat: add customization, particles, license, and README updates
-- `2026-08-18` **unlock-count-live-wallpaper** — fix: add launcher activity, capture real screenshots, update README
-- `2026-08-18` **livewally** — Delete CHANGES_SUMMARY.md
+- `2026-08-19` **unlock-count-live-wallpaper** — feat: add random and trending picker actions, polish trend-forward sel
+- `2026-08-19` **unlock-count-live-wallpaper** — feat: redesign picker with glassmorphism grid, add 4 trend-forward mod
+- `2026-08-19` **unlock-count-live-wallpaper** — feat: add DataRepository, live previews, 11 data-driven wallpaper mode
+- `2026-08-19` **unlock-count-live-wallpaper** — fix: upgrade UI to production standard with NestedScrollView, Collapsi
+- `2026-08-19` **unlock-count-live-wallpaper** — feat: add wallpaper picker, 6 dynamic live wallpaper modes, real-time 
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
