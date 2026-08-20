@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-20` **droidtank.is-a.dev** — Complete techy showcase site: libraries, projects, contributions, blog
 - `2026-08-20` **govindtank.is-a.dev** — Replace ASCII art with terminal whoami/cat role.txt style hero block
 - `2026-08-20` **govindtank.is-a.dev** — Add Play Store apps with icons/links; fix typewriter animation; remove
 - `2026-08-20` **govindtank.is-a.dev** — Replace placeholder projects with real GitHub repos; fix year to 2017–
 - `2026-08-20` **govindtank.github.io** — blog: Building Developer Tools in 2026: From CLI Design to AI-Assisted
-- `2026-08-20` **govindtank.github.io** — chore: stop tracking dist/ build artifacts
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
