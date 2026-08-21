@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-21` **govindtank.github.io** — Add Google Play Store links and project images to THE VAULT
 - `2026-08-21` **droidtank.is-a.dev** — fix: strip YAML frontmatter from blog detail and excerpts
 - `2026-08-21` **droidtank.is-a.dev** — refactor: open-source hero, list+paginated blogs, curated repos, full-
 - `2026-08-21` **droidtank.is-a.dev** — feat: replace with real blogs + live GitHub data + in-memory blog syst
 - `2026-08-21` **droidtank.is-a.dev** — Fix blog detail, clean UI, remove duplicates, keep matrix rain backgro
-- `2026-08-21` **droidtank.is-a.dev** — Fix blog cards, add proper blog detail view, remove AI artifacts
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
