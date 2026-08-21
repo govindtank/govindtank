@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-21` **droidtank.is-a.dev** — Cosmos theme + embedded blogs + Play Store apps + GitHub snake
-- `2026-08-21` **govindtank.github.io** — blog: Server-Driven UI in Mobile Apps: Dynamic Experiences Without App
-- `2026-08-20` **droidtank.is-a.dev** — Complete techy showcase site: libraries, projects, contributions, blog
-- `2026-08-20` **govindtank.is-a.dev** — Replace ASCII art with terminal whoami/cat role.txt style hero block
-- `2026-08-20` **govindtank.is-a.dev** — Add Play Store apps with icons/links; fix typewriter animation; remove
+- `2026-08-21` **droidtank.is-a.dev** — fix: strip YAML frontmatter from blog detail and excerpts
+- `2026-08-21` **droidtank.is-a.dev** — refactor: open-source hero, list+paginated blogs, curated repos, full-
+- `2026-08-21` **droidtank.is-a.dev** — feat: replace with real blogs + live GitHub data + in-memory blog syst
+- `2026-08-21` **droidtank.is-a.dev** — Fix blog detail, clean UI, remove duplicates, keep matrix rain backgro
+- `2026-08-21` **droidtank.is-a.dev** — Fix blog cards, add proper blog detail view, remove AI artifacts
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
