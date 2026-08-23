@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-23` **droidtank.is-a.dev** — Create CNAME
+- `2026-08-23` **govindtank.is-a.dev** — Create CNAME
+- `2026-08-23` **govindtank.github.io** — blog: Docker for Mobile Developers: Streamlining Android and Flutter B
 - `2026-08-22` **govindtank.github.io** — blog: SwiftUI vs Jetpack Compose: The Native UI Framework Showdown in 
 - `2026-08-21` **govindtank.github.io** — Add Google Play Store links and project images to THE VAULT
-- `2026-08-21` **droidtank.is-a.dev** — fix: strip YAML frontmatter from blog detail and excerpts
-- `2026-08-21` **droidtank.is-a.dev** — refactor: open-source hero, list+paginated blogs, curated repos, full-
-- `2026-08-21` **droidtank.is-a.dev** — feat: replace with real blogs + live GitHub data + in-memory blog syst
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
