@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-24` **govindtank.github.io** — blog: Prompt Engineering for Production: Getting Reliable Output from 
-- `2026-08-23` **droidtank.is-a.dev** — Create CNAME
-- `2026-08-23` **govindtank.is-a.dev** — Create CNAME
-- `2026-08-23` **govindtank.github.io** — blog: Docker for Mobile Developers: Streamlining Android and Flutter B
-- `2026-08-22` **govindtank.github.io** — blog: SwiftUI vs Jetpack Compose: The Native UI Framework Showdown in 
+- `2026-08-24` **flutter_media_player** — docs: remove dummy screenshots from README, add live demo link
+- `2026-08-24` **flutter_media_player** — chore(web): initial gh-pages with web build
+- `2026-08-24` **flutter_media_player** — refactor: rename package to flutter_media_player across whole project
+- `2026-08-24` **flutter_media_player** — docs: add web screenshots, improve README, remove unused deps, suggest
+- `2026-08-24` **flutter_media_player** — refactor: complete phases 1-4 - deps, architecture, UX, polish
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
