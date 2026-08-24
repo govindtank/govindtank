@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-24` **govindtank.github.io** — blog: Prompt Engineering for Production: Getting Reliable Output from 
 - `2026-08-23` **droidtank.is-a.dev** — Create CNAME
 - `2026-08-23` **govindtank.is-a.dev** — Create CNAME
 - `2026-08-23` **govindtank.github.io** — blog: Docker for Mobile Developers: Streamlining Android and Flutter B
 - `2026-08-22` **govindtank.github.io** — blog: SwiftUI vs Jetpack Compose: The Native UI Framework Showdown in 
-- `2026-08-21` **govindtank.github.io** — Add Google Play Store links and project images to THE VAULT
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
