@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-25` **govindtank.github.io** — 🔧 Fix blog duplicates & add unique AI-generated covers
+- `2026-08-25` **govindtank.github.io** — blog: AI-Native App Architecture: Designing Applications Around LLM Ca
 - `2026-08-25` **govindtank.github.io** — blog: rewrite Kotlin 2.x post with war-story archetype
 - `2026-08-25` **govindtank.github.io** — blog: rewrite 1 posts with human-voice v4 pipeline
 - `2026-08-25` **govindtank.github.io** — blog: add daily post 2026-08-25
-- `2026-08-25` **govindtank.github.io** — blog: Kotlin 2.x and the K2 Compiler: What It Unlocked for Android Dev
-- `2026-08-25` **govindtank.github.io** — blog: WebAssembly in 2026: From Browser to Edge Computing and Beyond (
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
