@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-26` **govindtank.github.io** — blog: The Future of WebAssembly: Beyond the Browser into Cloud and Edg
+- `2026-08-26` **govindtank.github.io** — fix: blog automation — slugify regex bug, stage post before push, HTTP
 - `2026-08-26` **govindtank.github.io** — blog: AI-Native App Architecture: Designing Applications Around LLM Ca
 - `2026-08-26` **govindtank.github.io** — 📸 Update all 60 blog posts with contextual Unsplash cover images — uni
 - `2026-08-25` **govindtank.github.io** — 🔧 Fix blog duplicates & add unique AI-generated covers
-- `2026-08-25` **govindtank.github.io** — blog: AI-Native App Architecture: Designing Applications Around LLM Ca
-- `2026-08-25` **govindtank.github.io** — blog: rewrite Kotlin 2.x post with war-story archetype
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
