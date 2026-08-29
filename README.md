@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-08-29` **govindtank.github.io** — blog: Local-First Sync Engines: ElectricSQL, PowerSync, and the Offlin
+- `2026-08-29` **govindtank.github.io** — blog: AI Agents in Production: From Prototypes to Reliable Autonomous 
 - `2026-08-26` **govindtank.github.io** — blog: The Future of WebAssembly: Beyond the Browser into Cloud and Edg
 - `2026-08-26` **govindtank.github.io** — fix: blog automation — slugify regex bug, stage post before push, HTTP
 - `2026-08-26` **govindtank.github.io** — blog: AI-Native App Architecture: Designing Applications Around LLM Ca
-- `2026-08-26` **govindtank.github.io** — 📸 Update all 60 blog posts with contextual Unsplash cover images — uni
-- `2026-08-25` **govindtank.github.io** — 🔧 Fix blog duplicates & add unique AI-generated covers
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
