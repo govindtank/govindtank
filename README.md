@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-08-29` **govindtank.github.io** — blog: Local-First Sync Engines: ElectricSQL, PowerSync, and the Offlin
-- `2026-08-29` **govindtank.github.io** — blog: AI Agents in Production: From Prototypes to Reliable Autonomous 
-- `2026-08-26` **govindtank.github.io** — blog: The Future of WebAssembly: Beyond the Browser into Cloud and Edg
-- `2026-08-26` **govindtank.github.io** — fix: blog automation — slugify regex bug, stage post before push, HTTP
-- `2026-08-26` **govindtank.github.io** — blog: AI-Native App Architecture: Designing Applications Around LLM Ca
+- `2026-08-31` **govindtank.github.io** — blog: AI-Driven Accessibility: Automatic UI Adaptation for Disabilitie
+- `2026-08-31` **govindtank.github.io** — blog: LLM-Centric App Design: Token-Aware UI, Context Window Managemen
+- `2026-08-31` **govindtank.github.io** — blog: AI-Powered Test Generation for Flutter/Android: UI Coverage, Edg
+- `2026-08-31` **govindtank.github.io** — blog: Ethical AI in Mobile Apps: Bias Detection, Explainable AI, GDPR 
+- `2026-08-31` **govindtank.github.io** — blog: AI-Native IDEs for Mobile Development: Flutter AI Features, Andr
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
