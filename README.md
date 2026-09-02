@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-09-02` **govindtank.github.io** — blog: Effective TypeScript 5.7: Inference, Const Generics, and Templat
 - `2026-09-01` **govindtank.github.io** — blog: Cross-Platform Mobile in 2026: Flutter vs React Native vs Kotlin
 - `2026-08-31` **govindtank.github.io** — blog: AI-Driven Accessibility: Automatic UI Adaptation for Disabilitie
 - `2026-08-31` **govindtank.github.io** — blog: LLM-Centric App Design: Token-Aware UI, Context Window Managemen
 - `2026-08-31` **govindtank.github.io** — blog: AI-Powered Test Generation for Flutter/Android: UI Coverage, Edg
-- `2026-08-31` **govindtank.github.io** — blog: Ethical AI in Mobile Apps: Bias Detection, Explainable AI, GDPR 
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
