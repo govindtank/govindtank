@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-09-07` **dharmyudh_game** — Add 3D Tactical FPS/3P modes, high-detail 3D mythological warrior mode
 - `2026-09-07` **govindtank.github.io** — feat(blog): publish 2 new post(s) - 2026-09-07
 - `2026-09-03` **govindtank.github.io** — blog: ComfyUI Workflows for Blog Cover Art: Stable Diffusion, ControlN
 - `2026-09-02` **govindtank.github.io** — blog: Effective TypeScript 5.7: Inference, Const Generics, and Templat
 - `2026-09-01` **govindtank.github.io** — blog: Cross-Platform Mobile in 2026: Flutter vs React Native vs Kotlin
-- `2026-08-31` **govindtank.github.io** — blog: AI-Driven Accessibility: Automatic UI Adaptation for Disabilitie
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
