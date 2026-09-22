@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-09-22` **portfolioApp** — fix(pages): deploy privacy_policy.html to GitHub Pages web root
-- `2026-09-22` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-09-22
-- `2026-09-21` **govindtank.github.io** — feat(blog): publish 2 new post(s) - 2026-09-21
-- `2026-09-20` **govindtank.github.io** — feat(blog): publish 2 new post(s) - 2026-09-20
-- `2026-09-19` **govindtank.github.io** — feat(blog): publish 2 new post(s) - 2026-09-19
+- `2026-09-22` **portfolioApp** — feat(v2.1): phone responsiveness, interactive github snake matrix, red
+- `2026-09-22` **portfolioApp** — fix(theme): restore dark mode default for production
+- `2026-09-22` **portfolioApp** — feat(design): improvise light mode with ambient mesh gradient & settin
+- `2026-09-22` **portfolioApp** — fix(ci): remove hardcoded jdk path from gradle.properties & update wid
+- `2026-09-22` **portfolioApp** — feat(v2): redesign with cyber-architect UI, dynamic blog reader, new p
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
