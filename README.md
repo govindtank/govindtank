@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-09-23` **wonderverse-app** — chore: automated clean-room release [2026-09-23 09:19 UTC]
-- `2026-09-23` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-09-23
-- `2026-09-22` **portfolioApp** — feat(v2.1): phone responsiveness, interactive github snake matrix, red
-- `2026-09-22` **portfolioApp** — fix(theme): restore dark mode default for production
-- `2026-09-22` **portfolioApp** — feat(design): improvise light mode with ambient mesh gradient & settin
+- `2026-09-23` **portfolioApp** — fix(android): remove deprecated enableUncompressedNativeLibs gradle pr
+- `2026-09-23` **portfolioApp** — fix(android): align AGP 8.5.2 and compileSdk 34 for CI builds
+- `2026-09-23` **portfolioApp** — fix(ci): upgrade Flutter to 3.27.4 in CI workflows and fix syntax comp
+- `2026-09-23` **portfolioApp** — refactor(ui): elevate portfolio app with floating glass dock and strea
+- `2026-09-23` **govindtank.github.io** — fix(comments): bind Giscus discussions explicitly to post slug term
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
