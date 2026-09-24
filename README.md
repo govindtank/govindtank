@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-09-24` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-09-24
-- `2026-09-24` **wonderverse-app** — chore: automated clean-room release [2026-09-24 01:31 UTC]
-- `2026-09-23` **portfolioApp** — fix(android): remove deprecated enableUncompressedNativeLibs gradle pr
-- `2026-09-23` **portfolioApp** — fix(android): align AGP 8.5.2 and compileSdk 34 for CI builds
-- `2026-09-23` **portfolioApp** — fix(ci): upgrade Flutter to 3.27.4 in CI workflows and fix syntax comp
+- `2026-09-24` **govindtank.github.io** — feat(blog): enforce 120 strictly unique technical cover images with ze
+- `2026-09-24` **govindtank.github.io** — fix(blog): restore verified context-matched CDN cover images and enhan
+- `2026-09-24` **govindtank.github.io** — feat(blog): rollout clean SVG architecture cards and multi-platform so
+- `2026-09-24` **govindtank.github.io** — feat: add deterministic 2-digit seed to portfolio visitor counter
+- `2026-09-24` **droidtank.is-a.dev** — feat: scope telemetry to /droidtank and individual blog seeds
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
