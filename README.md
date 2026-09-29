@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-09-29` **flutter_media_player** — build: link official pub.dev packages as project dependencies
-- `2026-09-29` **portfolioApp** — build: link official pub.dev packages as project dependencies
-- `2026-09-29` **scratch_reveal** — feat: release v1.1.0 with feature upgrades, platform tags, and bug fix
-- `2026-09-29` **cron_schedule** — feat: release v1.1.0 with feature upgrades, platform tags, and bug fix
-- `2026-09-29` **offline_outbox** — feat: release v1.1.0 with feature upgrades, platform tags, and bug fix
+- `2026-09-29` **waveform_pro** — docs: add ecosystem integration matrix to README
+- `2026-09-29` **quote_painter** — docs: add ecosystem integration matrix to README
+- `2026-09-29` **flutter_whisper** — docs: add ecosystem integration matrix to README
+- `2026-09-29` **cron_schedule** — docs: add ecosystem integration matrix to README
+- `2026-09-29` **offline_outbox** — docs: add ecosystem integration matrix to README
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
