@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-09-29` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-09-29
-- `2026-09-29` **wonderverse-app** — chore: automated clean-room release [2026-09-29 01:44 UTC]
-- `2026-09-28` **scratch_reveal** — feat: initial release of scratch_reveal 1.0.0
-- `2026-09-28` **cron_schedule** — style: apply canonical dart format
-- `2026-09-28` **currency_field_formatter** — style: apply canonical dart format
+- `2026-09-29` **flutter_media_player** — build: link official pub.dev packages as project dependencies
+- `2026-09-29` **portfolioApp** — build: link official pub.dev packages as project dependencies
+- `2026-09-29` **scratch_reveal** — feat: release v1.1.0 with feature upgrades, platform tags, and bug fix
+- `2026-09-29` **cron_schedule** — feat: release v1.1.0 with feature upgrades, platform tags, and bug fix
+- `2026-09-29` **offline_outbox** — feat: release v1.1.0 with feature upgrades, platform tags, and bug fix
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
