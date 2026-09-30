@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-09-30` **waveform_pro** — feat: enhance API capabilities, bump version & trigger automated pub.d
-- `2026-09-30` **segmented_ring_painter** — feat: enhance API capabilities, bump version & trigger automated pub.d
-- `2026-09-30` **scratch_reveal** — feat: enhance API capabilities, bump version & trigger automated pub.d
-- `2026-09-30` **quote_painter** — feat: enhance API capabilities, bump version & trigger automated pub.d
-- `2026-09-30` **offline_outbox** — feat: enhance API capabilities, bump version & trigger automated pub.d
+- `2026-09-30` **waveform_pro** — ci: reset dirty state before pub dry-run verification in CI
+- `2026-09-30` **segmented_ring_painter** — ci: reset dirty state before pub dry-run verification in CI
+- `2026-09-30` **scratch_reveal** — ci: reset dirty state before pub dry-run verification in CI
+- `2026-09-30` **quote_painter** — ci: reset dirty state before pub dry-run verification in CI
+- `2026-09-30` **offline_outbox** — ci: reset dirty state before pub dry-run verification in CI
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
