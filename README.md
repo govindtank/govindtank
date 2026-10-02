@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-02` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-02
 - `2026-10-01` **ai_voice_orb** — Initial release of ai_voice_orb v1.0.0
 - `2026-10-01` **dart_vector_index** — Initial release of dart_vector_index v1.0.0
 - `2026-10-01` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-01
 - `2026-10-01` **wonderverse-app** — chore: automated clean-room release [2026-10-01 01:30 UTC]
-- `2026-09-30` **waveform_pro** — ci: reset dirty state before pub dry-run verification in CI
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
