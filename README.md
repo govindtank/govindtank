@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-05` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-05
 - `2026-10-04` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-04
 - `2026-10-03` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-03
 - `2026-10-02` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-02
 - `2026-10-01` **ai_voice_orb** — Initial release of ai_voice_orb v1.0.0
-- `2026-10-01` **dart_vector_index** — Initial release of dart_vector_index v1.0.0
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
