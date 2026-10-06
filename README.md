@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-10-06` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-06
-- `2026-10-05` **ambient_backdrop_glow** — docs: standardize support badges for Buy Me a Coffee, GitHub Sponsors,
-- `2026-10-05` **country_mobile_validator** — docs: standardize support badges for Buy Me a Coffee, GitHub Sponsors,
-- `2026-10-05` **cron_schedule** — docs: standardize support badges for Buy Me a Coffee, GitHub Sponsors,
-- `2026-10-05` **currency_field_formatter** — docs: standardize support badges for Buy Me a Coffee, GitHub Sponsors,
+- `2026-10-06` **spatial_card** — fix(test): correct example widget test imports
+- `2026-10-06` **spatial_card** — chore(release): bump spatial_card to 1.0.2 with synchronized README an
+- `2026-10-06` **quote_painter** — chore(release): bump quote_painter to sync README badges and live demo
+- `2026-10-06` **offline_outbox** — chore(release): bump offline_outbox to sync README badges and live dem
+- `2026-10-06` **cron_schedule** — chore(release): bump cron_schedule to sync README badges and live demo
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
