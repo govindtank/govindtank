@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-07` **spatial_card** — feat(web): update example web index to interactive shader visualizer
 - `2026-10-07` **droidtank.is-a.dev** — feat(ui): implement developer-centric neo-brutalist portfolio with sep
 - `2026-10-07` **droidtank.is-a.dev** — feat(ui): complete renovation inspired by impossibl.com - pitch black 
 - `2026-10-07` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-07
 - `2026-10-06` **spatial_card** — fix(test): correct example widget test imports
-- `2026-10-06` **spatial_card** — chore(release): bump spatial_card to 1.0.2 with synchronized README an
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
