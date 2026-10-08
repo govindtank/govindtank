@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-10-08` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-08
-- `2026-10-07` **spatial_card** — feat(web): update example web index to interactive shader visualizer
-- `2026-10-07` **droidtank.is-a.dev** — feat(ui): implement developer-centric neo-brutalist portfolio with sep
-- `2026-10-07` **droidtank.is-a.dev** — feat(ui): complete renovation inspired by impossibl.com - pitch black 
-- `2026-10-07` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-07
+- `2026-10-08` **govindtank.github.io** — chore: update sitemap, rss, and blog html generators to use govindtank
+- `2026-10-08` **govindtank.is-a.dev** — feat: add sitemap.xml, robots.txt, and canonical url for search consol
+- `2026-10-08` **droidtank.is-a.dev** — feat: integrate interactive dev tools showcase directly on homepage an
+- `2026-10-08` **droidtank.is-a.dev** — feat: launch 4 developer utilities & interactive playgrounds suite und
+- `2026-10-08` **droidtank.is-a.dev** — feat: auto-generate sitemap.xml and robots.txt for search console inde
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
