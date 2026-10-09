@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-09` **autoscroll** — docs: public showcase, store branding, live demo videos, and privacy p
 - `2026-10-09` **autoscroll** — docs: public showcase, store branding, live demo video, and privacy po
 - `2026-10-09` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-09
 - `2026-10-08` **govindtank.github.io** — chore: update sitemap, rss, and blog html generators to use govindtank
 - `2026-10-08` **govindtank.is-a.dev** — feat: add sitemap.xml, robots.txt, and canonical url for search consol
-- `2026-10-08` **droidtank.is-a.dev** — feat: integrate interactive dev tools showcase directly on homepage an
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
