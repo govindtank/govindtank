@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-12` **govindtank.is-a.dev** — docs: add official Privacy Policy for Gravity Grid
+- `2026-10-12` **autoscroll** — docs: add compliance demo video player and links to privacy policy
+- `2026-10-12` **autoscroll** — feat(ui): add light/dark mode theme selector, clean mock images, captu
+- `2026-10-12` **autoscroll** — fix(policy): implement compliant two-button accessibility prominent di
 - `2026-10-12` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-12
-- `2026-10-11` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-11
-- `2026-10-10` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-10
-- `2026-10-09` **autoscroll** — docs: public showcase, store branding, live demo videos, and privacy p
-- `2026-10-09` **autoscroll** — docs: public showcase, store branding, live demo video, and privacy po
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
