@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-15` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-15
 - `2026-10-14` **govindtank.github.io** — feat(blog): add 8 dynamic war-story archetypes with intelligent auto-s
 - `2026-10-14` **govindtank.github.io** — rewrite(blog): replace dry tutorial style with war-story format on Oct
 - `2026-10-14` **govindtank.github.io** — fix(blog): remediate off-topic content in Oct 11-14 posts + add topic 
 - `2026-10-14` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-14
-- `2026-10-13` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-13
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
