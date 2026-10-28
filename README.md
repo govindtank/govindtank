@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-10-27` **interactive_radar_chart** — feat: initial commit for interactive_radar_chart v1.0.0
-- `2026-10-27` **tactile_fluid_slider** — feat: initial commit for tactile_fluid_slider v1.0.0
-- `2026-10-27` **smooth_signature_pad** — feat: initial commit for smooth_signature_pad v1.0.0
-- `2026-10-27` **flutter_privacy_vault** — feat: initial commit for flutter_privacy_vault v1.0.0
-- `2026-10-27` **flutter_sonner** — docs: add donation badges and support section
+- `2026-10-28` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-28
+- `2026-10-28` **interactive_radar_chart** — feat(release): interactive_radar_chart 1.1.0 with drag tooltip HUD and
+- `2026-10-28` **smooth_signature_pad** — feat(release): smooth_signature_pad 1.1.0 with auto-trim export and Pe
+- `2026-10-28` **flutter_privacy_vault** — feat(release): flutter_privacy_vault 1.1.0 with VaultPinPad and timed 
+- `2026-10-28` **flutter_sonner** — feat(release): flutter_sonner 1.1.0 with progress countdown bar and le
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
