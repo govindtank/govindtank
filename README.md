@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-10-30` **android_island_bar** — fix(v0.2.3): redesign hero showcase to display only isolated example i
 - `2026-10-30` **android_island_bar** — fix(v0.2.2): update Buy Me A Coffee URL to govindtanko; redesign hero 
 - `2026-10-30` **android_island_bar** — fix(v0.2.1): fix expanded view hit-testing and timer state persistence
 - `2026-10-30` **android_island_bar** — feat(v0.2.0): add cross-platform iOS & Web support, call & nav presets
 - `2026-10-30` **android_island_bar** — feat: initial implementation of android_island_bar with cutout snappin
-- `2026-10-30` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-30
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
