@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-11-04` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-04
-- `2026-11-03` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-03
-- `2026-11-02` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-02
-- `2026-11-01` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-01
-- `2026-10-31` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-10-31
+- `2026-11-04` **flutter_whisper** — chore(release): flutter_whisper 0.3.1 with funding links and refined d
+- `2026-11-04` **ambient_backdrop_glow** — chore(release): ambient_backdrop_glow 1.2.1 with funding links and ref
+- `2026-11-04` **quote_painter** — chore(release): quote_painter 0.3.1 with funding links and refined dis
+- `2026-11-04` **offline_outbox** — chore(release): offline_outbox 1.2.1 with funding links and refined di
+- `2026-11-04` **cron_schedule** — chore(release): cron_schedule 1.2.1 with funding links and refined dis
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
