@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-11-11` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-11
 - `2026-11-10` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-10
 - `2026-11-09` **flutter_smooth_marquee** — fix(example): replace deprecated activeColor with activeTrackColor
 - `2026-11-09` **flutter_smooth_marquee** — feat: upgrade live studio demo, real-world presets, and UI-first showc
 - `2026-11-09` **smart_step_indicator** — docs: add hero vector showcase, live demo link, and author sponsors
-- `2026-11-09` **adaptive_context_menu** — docs: add hero vector showcase, live demo link, and author sponsors
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
