@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-11-13` **govindtank.is-a.dev** — feat: implement brutalist luxury editorial design language with verifi
-- `2026-11-13` **droidtank.is-a.dev** — feat: implement cyber-HUD architecture & open-source package portal wi
-- `2026-11-13` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-13
-- `2026-11-12` **gt_audio** — feat(v1.0.1): add SPM support, modernize kotlin, add architecture visu
-- `2026-11-12` **gt_audio** — feat: initial stable release of gt_audio 1.0.0
+- `2026-11-13` **droidtank.is-a.dev** — feat: sanitize proprietary client app names with generic architecture 
+- `2026-11-13` **droidtank.is-a.dev** — feat: harmonize symmetrical section headers, decongest top HUD navigat
+- `2026-11-13` **govindtank.is-a.dev** — fix: lock portfolio strictly to Design 2 and remove design toggle widg
+- `2026-11-13` **droidtank.is-a.dev** — feat: add interactive mobile device preview, update section titles, in
+- `2026-11-13` **govindtank.is-a.dev** — fix: ensure contact headline displays 'LET'S TALK.' and enhance footer
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
