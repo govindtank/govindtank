@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-11-13` **govindtank.is-a.dev** — feat: implement brutalist luxury editorial design language with verifi
+- `2026-11-13` **droidtank.is-a.dev** — feat: implement cyber-HUD architecture & open-source package portal wi
+- `2026-11-13` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-13
 - `2026-11-12` **gt_audio** — feat(v1.0.1): add SPM support, modernize kotlin, add architecture visu
 - `2026-11-12` **gt_audio** — feat: initial stable release of gt_audio 1.0.0
-- `2026-11-12` **flutter_smooth_marquee** — release: v1.0.3 with actual live studio screenshot and icon font fix
-- `2026-11-12` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-12
-- `2026-11-11` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-11
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
