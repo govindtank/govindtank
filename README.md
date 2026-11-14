@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-11-14` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-14
 - `2026-11-13` **droidtank.is-a.dev** — feat: sanitize proprietary client app names with generic architecture 
 - `2026-11-13` **droidtank.is-a.dev** — feat: harmonize symmetrical section headers, decongest top HUD navigat
 - `2026-11-13` **govindtank.is-a.dev** — fix: lock portfolio strictly to Design 2 and remove design toggle widg
 - `2026-11-13` **droidtank.is-a.dev** — feat: add interactive mobile device preview, update section titles, in
-- `2026-11-13` **govindtank.is-a.dev** — fix: ensure contact headline displays 'LET'S TALK.' and enhance footer
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
