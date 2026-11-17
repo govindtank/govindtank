@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-11-16` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-16
-- `2026-11-15` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-15
-- `2026-11-14` **dhananjay6561/dot** — remove network state permission from media3 and guard in CI (#67)
-- `2026-11-14` **govindtank.github.io** — feat(blog): publish 1 new post(s) - 2026-11-14
-- `2026-11-13` **droidtank.is-a.dev** — feat: sanitize proprietary client app names with generic architecture 
+- `2026-11-17` **country_mobile_validator** — feat(carrier): add TelecomCarrier detector, WhatsApp links, and String
+- `2026-11-17` **smart_step_indicator** — chore(release): bump version to 1.1.0 for semantic versioning
+- `2026-11-17` **smart_step_indicator** — feat(timeline): add OrderTrackingTimeline, sub-checkpoints, and KYC ac
+- `2026-11-17` **currency_field_formatter** — fix(pubspec): correct platforms specification syntax
+- `2026-11-17` **currency_field_formatter** — feat(turnkey): add CurrencyTextField, zero-typo CurrencyWords, and qui
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
