@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
-- `2026-11-17` **android_island_bar** — feat(presets): add ride-hailing and food delivery live activities
-- `2026-11-17` **scratch_reveal** — feat(rewards): add RewardScratchCard and celebratory confetti cannon
-- `2026-11-17` **smooth_signature_pad** — feat(legal): add SignatureCaptureCard and cryptographic audit trail
-- `2026-11-17` **country_mobile_validator** — feat(carrier): add TelecomCarrier detector, WhatsApp links, and String
-- `2026-11-17` **smart_step_indicator** — chore(release): bump version to 1.1.0 for semantic versioning
+- `2026-11-18` **scratch_reveal** — chore(release): bump scratch_reveal to 1.3.1 for 160/160 pub score
+- `2026-11-18` **android_island_bar** — chore(release): bump android_island_bar to 0.4.1 for 160/160 pub score
+- `2026-11-18` **currency_field_formatter** — chore(release): bump currency_field_formatter to 1.3.1 for 160/160 pub
+- `2026-11-18` **smart_step_indicator** — chore(release): bump smart_step_indicator to 1.1.2 with customNodeBuil
+- `2026-11-18` **flutter_privacy_vault** — chore(release): bump flutter_privacy_vault to 1.3.1 for 160/160 pub sc
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
