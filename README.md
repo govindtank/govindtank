@@ -19,11 +19,11 @@
 ## Recent Activity
 
 <!-- ACTIVITY:START -->
+- `2026-11-17` **android_island_bar** — feat(presets): add ride-hailing and food delivery live activities
+- `2026-11-17` **scratch_reveal** — feat(rewards): add RewardScratchCard and celebratory confetti cannon
+- `2026-11-17` **smooth_signature_pad** — feat(legal): add SignatureCaptureCard and cryptographic audit trail
 - `2026-11-17` **country_mobile_validator** — feat(carrier): add TelecomCarrier detector, WhatsApp links, and String
 - `2026-11-17` **smart_step_indicator** — chore(release): bump version to 1.1.0 for semantic versioning
-- `2026-11-17` **smart_step_indicator** — feat(timeline): add OrderTrackingTimeline, sub-checkpoints, and KYC ac
-- `2026-11-17` **currency_field_formatter** — fix(pubspec): correct platforms specification syntax
-- `2026-11-17` **currency_field_formatter** — feat(turnkey): add CurrencyTextField, zero-typo CurrencyWords, and qui
 <!-- ACTIVITY:END -->
 
 *Last updated: 2026-08-07 19:04 UTC*
